@@ -35,6 +35,9 @@
             this.lblInfo = new System.Windows.Forms.Label();
             this.barProgress = new System.Windows.Forms.ProgressBar();
             this.lblVersion = new System.Windows.Forms.Label();
+            this.btnImport = new System.Windows.Forms.Button();
+            this.cbxDelete = new System.Windows.Forms.CheckBox();
+            this.cbxTrim = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtAID
@@ -61,12 +64,12 @@
             this.txtLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLog.Location = new System.Drawing.Point(12, 305);
+            this.txtLog.Location = new System.Drawing.Point(12, 381);
             this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
             this.txtLog.ReadOnly = true;
             this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtLog.Size = new System.Drawing.Size(569, 270);
+            this.txtLog.Size = new System.Drawing.Size(569, 259);
             this.txtLog.TabIndex = 2;
             // 
             // btnStart
@@ -74,7 +77,7 @@
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStart.Enabled = false;
-            this.btnStart.Location = new System.Drawing.Point(12, 278);
+            this.btnStart.Location = new System.Drawing.Point(12, 354);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(569, 21);
             this.btnStart.TabIndex = 3;
@@ -101,7 +104,6 @@
             this.lblQCMA.Size = new System.Drawing.Size(155, 12);
             this.lblQCMA.TabIndex = 6;
             this.lblQCMA.Text = "QCMA PS Vita 数据备份目录";
-            this.lblQCMA.Click += new System.EventHandler(this.lblQCMA_Click);
             // 
             // txtQCMA
             // 
@@ -137,7 +139,7 @@
             // 
             this.barProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.barProgress.Location = new System.Drawing.Point(12, 251);
+            this.barProgress.Location = new System.Drawing.Point(12, 328);
             this.barProgress.Maximum = 17;
             this.barProgress.Name = "barProgress";
             this.barProgress.Size = new System.Drawing.Size(569, 21);
@@ -145,18 +147,53 @@
             // 
             // lblVersion
             // 
-            this.lblVersion.Location = new System.Drawing.Point(326, 580);
+            this.lblVersion.Location = new System.Drawing.Point(326, 644);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(255, 12);
             this.lblVersion.TabIndex = 10;
             this.lblVersion.Text = "auto h-encore version x";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // btnImport
+            // 
+            this.btnImport.Location = new System.Drawing.Point(12, 260);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(566, 21);
+            this.btnImport.TabIndex = 11;
+            this.btnImport.Text = "我已经下载了一部分或者全部必要的文件，我想使用它们";
+            this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // cbxDelete
+            // 
+            this.cbxDelete.AutoSize = true;
+            this.cbxDelete.Location = new System.Drawing.Point(15, 306);
+            this.cbxDelete.Name = "cbxDelete";
+            this.cbxDelete.Size = new System.Drawing.Size(306, 16);
+            this.cbxDelete.TabIndex = 12;
+            this.cbxDelete.Text = "删除已存在的文件 (如果之前的操作出错了，选择它)";
+            this.cbxDelete.UseVisualStyleBackColor = true;
+            // 
+            // cbxTrim
+            // 
+            this.cbxTrim.AutoSize = true;
+            this.cbxTrim.Checked = true;
+            this.cbxTrim.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxTrim.Location = new System.Drawing.Point(15, 285);
+            this.cbxTrim.Name = "cbxTrim";
+            this.cbxTrim.Size = new System.Drawing.Size(498, 16);
+            this.cbxTrim.TabIndex = 13;
+            this.cbxTrim.Text = "删减 bitter smile 试玩版 的多余内容 (将 h-encore app 大小 从 240MB 减小至 17MB)";
+            this.cbxTrim.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 597);
+            this.ClientSize = new System.Drawing.Size(593, 663);
+            this.Controls.Add(this.cbxTrim);
+            this.Controls.Add(this.cbxDelete);
+            this.Controls.Add(this.btnImport);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.barProgress);
             this.Controls.Add(this.lblInfo);
@@ -170,7 +207,7 @@
             this.Controls.Add(this.txtAID);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "自动 h-encore 汉化By 多玩论坛 叶寻";
+            this.Text = "自动化 h-encore 汉化By 多玩 天鹰叶寻";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,6 +226,9 @@
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.ProgressBar barProgress;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.CheckBox cbxDelete;
+        private System.Windows.Forms.CheckBox cbxTrim;
     }
 }
 

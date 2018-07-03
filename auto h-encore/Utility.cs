@@ -9,6 +9,8 @@ using System.IO;
 using System.IO.Compression;
 using System.Windows.Forms;
 using System.Diagnostics;
+using Microsoft.VisualBasic.FileIO;
+using System.Security.Cryptography;
 
 namespace auto_h_encore {
     public static class Utility {
@@ -25,13 +27,12 @@ namespace auto_h_encore {
             }
         }
 
-        public static void DownloadFile(Form1 form, bool incrementProgress, string url, string output) {
+        public static void DownloadFile(Form1 form, string url, string output) {
             while (true)
                 try {
                     form.info("正在下载 " + output.Replace('/', '\\').Split('\\').Last());
                     web.DownloadFile(url, output);
                     form.info("      完成!");
-                    if (incrementProgress) form.incrementProgress();
                     return;
                 } catch (WebException ex) {
                     if (MessageBox.Show("下载失败 " + url + "\r\n\r\n确保已联网并重试. 如果依旧失败, 去 Github 提交错误报告.", "错误", MessageBoxButtons.RetryCancel) == DialogResult.Cancel)
@@ -41,7 +42,7 @@ namespace auto_h_encore {
 
         public static void ExtractFile(Form1 form, bool incrementProgress, string filePath, string outputDirectory) {
             try {
-                form.info("解包 " + filePath.Replace('/', '\\').Split('\\').Last());
+                form.info("解压 " + filePath.Replace('/', '\\').Split('\\').Last());
                 ZipFile.ExtractToDirectory(filePath, outputDirectory);
                 form.info("      完成!");
                 if (incrementProgress) form.incrementProgress();
@@ -75,12 +76,33 @@ namespace auto_h_encore {
                 Process process = Process.Start(psi);
                 process.WaitForExit();
                 form.info("      完成!");
-                if (incrementProgress) form.incrementProgress();
+                form.incrementProgress();
                 return;
             } catch (FileNotFoundException ex) {
                 MessageBox.Show("已下载的文件消失了.请重启程序,不要修改其安装目录内任何文件.");
                 throw ex;
             }
         }
+
+        public static string BrowseFile(string title, string extension, string restrictions) {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = restrictions;
+            dialog.CheckFileExists = true;
+            dialog.CheckPathExists = true;
+            dialog.DefaultExt = extension;
+            dialog.Multiselect = false;
+            dialog.Title = title;
+            dialog.ShowDialog();
+            return dialog.FileName;
+        }
+
+        public static string MD5Checksum(string path) {
+            using (MD5 md5 = MD5.Create()) {
+                using (FileStream stream = File.OpenRead(path)) {
+                    return BitConverter.ToString(md5.ComputeHash(stream)).Replace("-", "").ToLower();
+                }
+            }
+        }
+
     }
 }

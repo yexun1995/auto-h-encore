@@ -23,12 +23,12 @@ namespace auto_h_encore {
         private bool[] okFiles = new bool[4];
 
         private static string[] fileStatusMessages = new string[] {
-            "No file selected, will download.",
-            "File path is invalid",
-            "File selected and hash matches, will import.",
-            "File selected but hash does not match, will download",
-            "File selected but hash does not match. Hash override enabled, will import",
-            "Calculating checksum..."
+            "未选择文件，稍后将下载.",
+            "文件目录无效",
+            "已选择文件且校验通过, 即将导入.",
+            "已选择文件但校验未通过, 将要下载",
+            "已选择文件且校验未通过. 已忽略不匹配校验信息, 即将导入",
+            "计算 checksum..."
         };
 
         public FormFiles() {
@@ -137,26 +137,26 @@ namespace auto_h_encore {
         }
 
         private void btnBrowseHencore_Click(object sender, EventArgs e) {
-            txtHencore.Text = Utility.BrowseFile("Browse for h-encore.zip v1.0", ".zip", "Zip files (*.zip)|*.zip");
+            txtHencore.Text = Utility.BrowseFile("请选择你的 h-encore.zip v1.0", ".zip", "Zip files (*.zip)|*.zip");
         }
 
         private void btnBrowsePkg2zip_Click(object sender, EventArgs e) {
-            txtPkg2zip.Text = Utility.BrowseFile("Browse for pkg2zip_32bit.zip v1.8", ".zip", "Zip files (*.zip)|*.zip");
+            txtPkg2zip.Text = Utility.BrowseFile("请选择你的 pkg2zip_32bit.zip v1.8", ".zip", "Zip files (*.zip)|*.zip");
         }
 
         private void btnBrowsePsvimgtools_Click(object sender, EventArgs e) {
-            txtPsvimgtools.Text = Utility.BrowseFile("psvimgtools-0.1-win32.zip v0.1", ".zip", "Zip files (*.zip)|*.zip");
+            txtPsvimgtools.Text = Utility.BrowseFile("请选择你的 psvimgtools-0.1-win32.zip v0.1", ".zip", "Zip files (*.zip)|*.zip");
         }
 
         private void btnBrowseBittersmile_Click(object sender, EventArgs e) {
-            txtBittersmile.Text = Utility.BrowseFile("Browse for BitterSmile demo pkg", ".pkg", "All files (*)|*");
+            txtBittersmile.Text = Utility.BrowseFile("请选择你的 BitterSmile 试玩版 pkg", ".pkg", "All files (*)|*");
         }
 
         private void cbxIgnoreHashes_CheckedChanged(object sender, EventArgs e) {
             if (!UserChecked) {
                 if (cbxIgnoreHashes.Checked) {
                     UserChecked = true;
-                    if (MessageBox.Show("Compatibility is not guranteed when using versions of files this application was not designed for. Continue anyways?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
+                    if (MessageBox.Show("该程序版本不适用于本工具，我无法保证其兼容性。 你确定要继续么?", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
                         cbxIgnoreHashes.BackColor = Color.Red;
                         UserChecked = false;
 

@@ -47,184 +47,182 @@
             // 
             // txtHencore
             // 
-            this.txtHencore.Location = new System.Drawing.Point(12, 77);
+            this.txtHencore.Location = new System.Drawing.Point(12, 71);
             this.txtHencore.Name = "txtHencore";
-            this.txtHencore.Size = new System.Drawing.Size(467, 20);
+            this.txtHencore.Size = new System.Drawing.Size(467, 21);
             this.txtHencore.TabIndex = 0;
             this.txtHencore.TextChanged += new System.EventHandler(this.txtHencore_TextChanged);
             // 
             // btnBrowseHencore
             // 
-            this.btnBrowseHencore.Location = new System.Drawing.Point(485, 75);
+            this.btnBrowseHencore.Location = new System.Drawing.Point(485, 69);
             this.btnBrowseHencore.Name = "btnBrowseHencore";
-            this.btnBrowseHencore.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowseHencore.Size = new System.Drawing.Size(75, 21);
             this.btnBrowseHencore.TabIndex = 1;
-            this.btnBrowseHencore.Text = "Browse";
+            this.btnBrowseHencore.Text = "浏览";
             this.btnBrowseHencore.UseVisualStyleBackColor = true;
             this.btnBrowseHencore.Click += new System.EventHandler(this.btnBrowseHencore_Click);
             // 
             // lblInfo
             // 
-            this.lblInfo.Location = new System.Drawing.Point(9, 16);
+            this.lblInfo.Location = new System.Drawing.Point(9, 15);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(551, 34);
+            this.lblInfo.Size = new System.Drawing.Size(551, 31);
             this.lblInfo.TabIndex = 2;
-            this.lblInfo.Text = "If you\'ve already downloaded some or all of the necessary files, and don\'t want t" +
-    "he application to redownload them, you can select the files here for the program" +
-    " to import.";
+            this.lblInfo.Text = "如果您已经下载了部分或全部必需文件，并且不希望应用程序重新下载它们，则可以在此处选择要导入程序的文件。";
             // 
             // lblHencoreName
             // 
             this.lblHencoreName.AutoSize = true;
-            this.lblHencoreName.Location = new System.Drawing.Point(9, 61);
+            this.lblHencoreName.Location = new System.Drawing.Point(9, 56);
             this.lblHencoreName.Name = "lblHencoreName";
-            this.lblHencoreName.Size = new System.Drawing.Size(104, 13);
+            this.lblHencoreName.Size = new System.Drawing.Size(131, 12);
             this.lblHencoreName.TabIndex = 3;
             this.lblHencoreName.Text = "h-encore.zip (v1.0.0)";
             // 
             // lblHencoreStatus
             // 
             this.lblHencoreStatus.AutoSize = true;
-            this.lblHencoreStatus.Location = new System.Drawing.Point(9, 100);
+            this.lblHencoreStatus.Location = new System.Drawing.Point(9, 92);
             this.lblHencoreStatus.Name = "lblHencoreStatus";
-            this.lblHencoreStatus.Size = new System.Drawing.Size(152, 13);
+            this.lblHencoreStatus.Size = new System.Drawing.Size(143, 12);
             this.lblHencoreStatus.TabIndex = 4;
-            this.lblHencoreStatus.Text = "No file selected, will download.";
+            this.lblHencoreStatus.Text = "未选择文件，稍后将下载.";
             // 
             // lblPkg2zipStatus
             // 
             this.lblPkg2zipStatus.AutoSize = true;
-            this.lblPkg2zipStatus.Location = new System.Drawing.Point(9, 169);
+            this.lblPkg2zipStatus.Location = new System.Drawing.Point(9, 156);
             this.lblPkg2zipStatus.Name = "lblPkg2zipStatus";
-            this.lblPkg2zipStatus.Size = new System.Drawing.Size(152, 13);
+            this.lblPkg2zipStatus.Size = new System.Drawing.Size(143, 12);
             this.lblPkg2zipStatus.TabIndex = 8;
-            this.lblPkg2zipStatus.Text = "No file selected, will download.";
+            this.lblPkg2zipStatus.Text = "未选择文件，稍后将下载.";
             // 
             // lblPkg2zipName
             // 
             this.lblPkg2zipName.AutoSize = true;
-            this.lblPkg2zipName.Location = new System.Drawing.Point(9, 130);
+            this.lblPkg2zipName.Location = new System.Drawing.Point(9, 120);
             this.lblPkg2zipName.Name = "lblPkg2zipName";
-            this.lblPkg2zipName.Size = new System.Drawing.Size(119, 13);
+            this.lblPkg2zipName.Size = new System.Drawing.Size(149, 12);
             this.lblPkg2zipName.TabIndex = 7;
             this.lblPkg2zipName.Text = "pkg2zip_32bit.zip (v1.8)";
             // 
             // btnBrowsePkg2zip
             // 
-            this.btnBrowsePkg2zip.Location = new System.Drawing.Point(485, 144);
+            this.btnBrowsePkg2zip.Location = new System.Drawing.Point(485, 133);
             this.btnBrowsePkg2zip.Name = "btnBrowsePkg2zip";
-            this.btnBrowsePkg2zip.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowsePkg2zip.Size = new System.Drawing.Size(75, 21);
             this.btnBrowsePkg2zip.TabIndex = 6;
-            this.btnBrowsePkg2zip.Text = "Browse";
+            this.btnBrowsePkg2zip.Text = "浏览";
             this.btnBrowsePkg2zip.UseVisualStyleBackColor = true;
             this.btnBrowsePkg2zip.Click += new System.EventHandler(this.btnBrowsePkg2zip_Click);
             // 
             // txtPkg2zip
             // 
-            this.txtPkg2zip.Location = new System.Drawing.Point(12, 146);
+            this.txtPkg2zip.Location = new System.Drawing.Point(12, 135);
             this.txtPkg2zip.Name = "txtPkg2zip";
-            this.txtPkg2zip.Size = new System.Drawing.Size(467, 20);
+            this.txtPkg2zip.Size = new System.Drawing.Size(467, 21);
             this.txtPkg2zip.TabIndex = 5;
             this.txtPkg2zip.TextChanged += new System.EventHandler(this.txtPkg2zip_TextChanged);
             // 
             // lblPsvimgtoolsStatus
             // 
             this.lblPsvimgtoolsStatus.AutoSize = true;
-            this.lblPsvimgtoolsStatus.Location = new System.Drawing.Point(9, 235);
+            this.lblPsvimgtoolsStatus.Location = new System.Drawing.Point(9, 217);
             this.lblPsvimgtoolsStatus.Name = "lblPsvimgtoolsStatus";
-            this.lblPsvimgtoolsStatus.Size = new System.Drawing.Size(152, 13);
+            this.lblPsvimgtoolsStatus.Size = new System.Drawing.Size(143, 12);
             this.lblPsvimgtoolsStatus.TabIndex = 12;
-            this.lblPsvimgtoolsStatus.Text = "No file selected, will download.";
+            this.lblPsvimgtoolsStatus.Text = "未选择文件，稍后将下载.";
             // 
             // lblPsvimgtoolsName
             // 
             this.lblPsvimgtoolsName.AutoSize = true;
-            this.lblPsvimgtoolsName.Location = new System.Drawing.Point(9, 196);
+            this.lblPsvimgtoolsName.Location = new System.Drawing.Point(9, 181);
             this.lblPsvimgtoolsName.Name = "lblPsvimgtoolsName";
-            this.lblPsvimgtoolsName.Size = new System.Drawing.Size(157, 13);
+            this.lblPsvimgtoolsName.Size = new System.Drawing.Size(197, 12);
             this.lblPsvimgtoolsName.TabIndex = 11;
             this.lblPsvimgtoolsName.Text = "psvimgtools-0.1-win32.zip (v0.1)";
             // 
             // btnBrowsePsvimgtools
             // 
-            this.btnBrowsePsvimgtools.Location = new System.Drawing.Point(485, 210);
+            this.btnBrowsePsvimgtools.Location = new System.Drawing.Point(485, 194);
             this.btnBrowsePsvimgtools.Name = "btnBrowsePsvimgtools";
-            this.btnBrowsePsvimgtools.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowsePsvimgtools.Size = new System.Drawing.Size(75, 21);
             this.btnBrowsePsvimgtools.TabIndex = 10;
-            this.btnBrowsePsvimgtools.Text = "Browse";
+            this.btnBrowsePsvimgtools.Text = "浏览";
             this.btnBrowsePsvimgtools.UseVisualStyleBackColor = true;
             this.btnBrowsePsvimgtools.Click += new System.EventHandler(this.btnBrowsePsvimgtools_Click);
             // 
             // txtPsvimgtools
             // 
-            this.txtPsvimgtools.Location = new System.Drawing.Point(12, 212);
+            this.txtPsvimgtools.Location = new System.Drawing.Point(12, 196);
             this.txtPsvimgtools.Name = "txtPsvimgtools";
-            this.txtPsvimgtools.Size = new System.Drawing.Size(467, 20);
+            this.txtPsvimgtools.Size = new System.Drawing.Size(467, 21);
             this.txtPsvimgtools.TabIndex = 9;
             this.txtPsvimgtools.TextChanged += new System.EventHandler(this.txtPsvimgtools_TextChanged);
             // 
             // lblBittersmileStatus
             // 
             this.lblBittersmileStatus.AutoSize = true;
-            this.lblBittersmileStatus.Location = new System.Drawing.Point(9, 305);
+            this.lblBittersmileStatus.Location = new System.Drawing.Point(9, 282);
             this.lblBittersmileStatus.Name = "lblBittersmileStatus";
-            this.lblBittersmileStatus.Size = new System.Drawing.Size(152, 13);
+            this.lblBittersmileStatus.Size = new System.Drawing.Size(143, 12);
             this.lblBittersmileStatus.TabIndex = 16;
-            this.lblBittersmileStatus.Text = "No file selected, will download.";
+            this.lblBittersmileStatus.Text = "未选择文件，稍后将下载.";
             // 
             // lblBittersmileName
             // 
             this.lblBittersmileName.AutoSize = true;
-            this.lblBittersmileName.Location = new System.Drawing.Point(9, 266);
+            this.lblBittersmileName.Location = new System.Drawing.Point(9, 246);
             this.lblBittersmileName.Name = "lblBittersmileName";
-            this.lblBittersmileName.Size = new System.Drawing.Size(106, 13);
+            this.lblBittersmileName.Size = new System.Drawing.Size(143, 12);
             this.lblBittersmileName.TabIndex = 15;
-            this.lblBittersmileName.Text = "bitter smile demo pkg";
+            this.lblBittersmileName.Text = "bitter smile 试玩版 pkg";
             // 
             // btnBrowseBittersmile
             // 
-            this.btnBrowseBittersmile.Location = new System.Drawing.Point(485, 280);
+            this.btnBrowseBittersmile.Location = new System.Drawing.Point(485, 258);
             this.btnBrowseBittersmile.Name = "btnBrowseBittersmile";
-            this.btnBrowseBittersmile.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowseBittersmile.Size = new System.Drawing.Size(75, 21);
             this.btnBrowseBittersmile.TabIndex = 14;
-            this.btnBrowseBittersmile.Text = "Browse";
+            this.btnBrowseBittersmile.Text = "浏览";
             this.btnBrowseBittersmile.UseVisualStyleBackColor = true;
             this.btnBrowseBittersmile.Click += new System.EventHandler(this.btnBrowseBittersmile_Click);
             // 
             // txtBittersmile
             // 
-            this.txtBittersmile.Location = new System.Drawing.Point(12, 282);
+            this.txtBittersmile.Location = new System.Drawing.Point(12, 260);
             this.txtBittersmile.Name = "txtBittersmile";
-            this.txtBittersmile.Size = new System.Drawing.Size(467, 20);
+            this.txtBittersmile.Size = new System.Drawing.Size(467, 21);
             this.txtBittersmile.TabIndex = 13;
             this.txtBittersmile.TextChanged += new System.EventHandler(this.txtBittersmile_TextChanged);
             // 
             // cbxIgnoreHashes
             // 
             this.cbxIgnoreHashes.AutoSize = true;
-            this.cbxIgnoreHashes.Location = new System.Drawing.Point(12, 342);
+            this.cbxIgnoreHashes.Location = new System.Drawing.Point(12, 316);
             this.cbxIgnoreHashes.Name = "cbxIgnoreHashes";
-            this.cbxIgnoreHashes.Size = new System.Drawing.Size(162, 17);
+            this.cbxIgnoreHashes.Size = new System.Drawing.Size(168, 16);
             this.cbxIgnoreHashes.TabIndex = 17;
-            this.cbxIgnoreHashes.Text = "Ignore Mismatch File Hashes";
+            this.cbxIgnoreHashes.Text = "忽略不匹配的文件校验信息";
             this.cbxIgnoreHashes.UseVisualStyleBackColor = true;
             this.cbxIgnoreHashes.CheckedChanged += new System.EventHandler(this.cbxIgnoreHashes_CheckedChanged);
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(12, 419);
+            this.btnOk.Location = new System.Drawing.Point(12, 387);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(548, 23);
+            this.btnOk.Size = new System.Drawing.Size(548, 21);
             this.btnOk.TabIndex = 18;
-            this.btnOk.Text = "Done";
+            this.btnOk.Text = "完成";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // FormFiles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 454);
+            this.ClientSize = new System.Drawing.Size(572, 419);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.cbxIgnoreHashes);
             this.Controls.Add(this.lblBittersmileStatus);
@@ -247,7 +245,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormFiles";
-            this.Text = "Select Pre-existing Files";
+            this.Text = "选择 已下载 的文件";
             this.Load += new System.EventHandler(this.FormFiles_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
