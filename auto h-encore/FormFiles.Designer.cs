@@ -85,18 +85,18 @@
             this.lblHencoreStatus.AutoSize = true;
             this.lblHencoreStatus.Location = new System.Drawing.Point(9, 92);
             this.lblHencoreStatus.Name = "lblHencoreStatus";
-            this.lblHencoreStatus.Size = new System.Drawing.Size(143, 12);
+            this.lblHencoreStatus.Size = new System.Drawing.Size(167, 12);
             this.lblHencoreStatus.TabIndex = 4;
-            this.lblHencoreStatus.Text = "未选择文件，稍后将下载.";
+            this.lblHencoreStatus.Text = "未选择文件，稍后将开始下载.";
             // 
             // lblPkg2zipStatus
             // 
             this.lblPkg2zipStatus.AutoSize = true;
             this.lblPkg2zipStatus.Location = new System.Drawing.Point(9, 156);
             this.lblPkg2zipStatus.Name = "lblPkg2zipStatus";
-            this.lblPkg2zipStatus.Size = new System.Drawing.Size(143, 12);
+            this.lblPkg2zipStatus.Size = new System.Drawing.Size(167, 12);
             this.lblPkg2zipStatus.TabIndex = 8;
-            this.lblPkg2zipStatus.Text = "未选择文件，稍后将下载.";
+            this.lblPkg2zipStatus.Text = "未选择文件，稍后将开始下载.";
             // 
             // lblPkg2zipName
             // 
@@ -130,9 +130,9 @@
             this.lblPsvimgtoolsStatus.AutoSize = true;
             this.lblPsvimgtoolsStatus.Location = new System.Drawing.Point(9, 217);
             this.lblPsvimgtoolsStatus.Name = "lblPsvimgtoolsStatus";
-            this.lblPsvimgtoolsStatus.Size = new System.Drawing.Size(143, 12);
+            this.lblPsvimgtoolsStatus.Size = new System.Drawing.Size(167, 12);
             this.lblPsvimgtoolsStatus.TabIndex = 12;
-            this.lblPsvimgtoolsStatus.Text = "未选择文件，稍后将下载.";
+            this.lblPsvimgtoolsStatus.Text = "未选择文件，稍后将开始下载.";
             // 
             // lblPsvimgtoolsName
             // 
@@ -166,18 +166,18 @@
             this.lblBittersmileStatus.AutoSize = true;
             this.lblBittersmileStatus.Location = new System.Drawing.Point(9, 282);
             this.lblBittersmileStatus.Name = "lblBittersmileStatus";
-            this.lblBittersmileStatus.Size = new System.Drawing.Size(143, 12);
+            this.lblBittersmileStatus.Size = new System.Drawing.Size(167, 12);
             this.lblBittersmileStatus.TabIndex = 16;
-            this.lblBittersmileStatus.Text = "未选择文件，稍后将下载.";
+            this.lblBittersmileStatus.Text = "未选择文件，稍后将开始下载.";
             // 
             // lblBittersmileName
             // 
             this.lblBittersmileName.AutoSize = true;
             this.lblBittersmileName.Location = new System.Drawing.Point(9, 246);
             this.lblBittersmileName.Name = "lblBittersmileName";
-            this.lblBittersmileName.Size = new System.Drawing.Size(143, 12);
+            this.lblBittersmileName.Size = new System.Drawing.Size(131, 12);
             this.lblBittersmileName.TabIndex = 15;
-            this.lblBittersmileName.Text = "bitter smile 试玩版 pkg";
+            this.lblBittersmileName.Text = "bitter smile demo pkg";
             // 
             // btnBrowseBittersmile
             // 

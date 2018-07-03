@@ -28,7 +28,7 @@ namespace auto_h_encore {
             "已选择文件且校验通过, 即将导入.",
             "已选择文件但校验未通过, 将要下载",
             "已选择文件且校验未通过. 已忽略不匹配校验信息, 即将导入",
-            "计算 checksum..."
+            "校验中..."
         };
 
         public FormFiles() {
@@ -149,14 +149,14 @@ namespace auto_h_encore {
         }
 
         private void btnBrowseBittersmile_Click(object sender, EventArgs e) {
-            txtBittersmile.Text = Utility.BrowseFile("请选择你的 BitterSmile 试玩版 pkg", ".pkg", "All files (*)|*");
+            txtBittersmile.Text = Utility.BrowseFile("请选择你的 BitterSmile demo pkg", ".pkg", "All files (*)|*");
         }
 
         private void cbxIgnoreHashes_CheckedChanged(object sender, EventArgs e) {
             if (!UserChecked) {
                 if (cbxIgnoreHashes.Checked) {
                     UserChecked = true;
-                    if (MessageBox.Show("该程序版本不适用于本工具，我无法保证其兼容性。 你确定要继续么?", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
+                    if (MessageBox.Show("使用不匹配的文件版本无法保证兼容性. 你确定要继续么?", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
                         cbxIgnoreHashes.BackColor = Color.Red;
                         UserChecked = false;
 

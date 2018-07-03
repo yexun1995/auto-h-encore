@@ -17,8 +17,8 @@ using System.Security.Cryptography;
 
 namespace auto_h_encore {
     public partial class Form1 : Form {
-
-
+        //TODO: Move ALL text into lang resource file to make translating easier
+        //TODO: Make exception catches reusable
         public Form1() {
             InitializeComponent();
 
@@ -30,19 +30,33 @@ namespace auto_h_encore {
         }
 
         private void VerifyUserInfo() {
-            if (txtAID.Text.Length == 16 && Directory.Exists(txtQCMA.Text + "\\APP\\")) btnStart.Enabled = true;
+
+            if (txtAID.Text.Length == 16 && Directory.Exists(txtQCMA.Text + "\\应用\\")) btnStart.Enabled = true;
             else btnStart.Enabled = false;
+            
         }
 
         private void generateDirectories(string AID) {
-            //TODO: Needs code cleanup pretty bad...
             if (cbxDelete.Checked) {
-                info("删除旧文件...");
-                if (Directory.Exists(Reference.path_data)) Directory.Delete(Reference.path_data, true);
-                for (int i = 0; i < 4; i++) {
-                    if (!FileSystem.FileExists(Global.fileOverrides[i])) Global.fileOverrides[i] = "";
+                try {
+                    info("删除旧文件...");
+                    if (Directory.Exists(Reference.path_data)) Directory.Delete(Reference.path_data, true);
+                    for (int i = 0; i < 4; i++) {
+                        if (!FileSystem.FileExists(Global.fileOverrides[i])) Global.fileOverrides[i] = "";
+                    }
+                } catch (UnauthorizedAccessException ex) {
+                    //20020200
+                    ErrorHandling.ShowError("20020200", "本应用程序没有对其安装目录的写入权限。请尝试以管理员身份重新运行本应用程序。");
+                    throw ex;
+                } catch (IOException ex) {
+                    //20FF0201
+                    ErrorHandling.ShowError("20FF0201", "意外错误: " + ex.Message);
+                    throw ex;
+                } catch (Exception ex) {
+                    //FFFF0202
+                    ErrorHandling.ShowError("FFFF0202", "意外错误: " + ex.Message);
+                    throw ex;
                 }
-                
             } else {
 
                 string path = "";
@@ -69,14 +83,14 @@ namespace auto_h_encore {
                     cleanName = path.Replace('/', '\\').Split('\\').Last();
 
                     if (Global.fileOverrides[id] != null && Global.fileOverrides[id] != "") {
-                        info("File import for file " + cleanName + " valid.");
+                        info("导入的文件 " + cleanName + " 有效.");
                         continue;
                     }
 
                     if (FileSystem.FileExists(path)) {
                         md5 = Utility.MD5Checksum(path);
                         if (Reference.hashes[id] == md5) {
-                            info("文件 " + cleanName + " 已下载并且有效, 不再重新下载");
+                            info("文件 " + cleanName + " 已下载并且有效, 不再重新下载.");
                             Global.fileOverrides[id] = path;
                         } else {
                             info("文件 " + cleanName + " 已下载但 hash 不匹配, 将要重新下载.");
@@ -91,19 +105,34 @@ namespace auto_h_encore {
             }
 
             if (Directory.Exists(txtQCMA.Text + "\\APP\\" + AID + "\\PCSG90096\\")) {
-                if (MessageBox.Show("你必须删除 QCMA 目录内已存在的 bittersmile 备份. 如果你想保留它，请立刻手动转移删除么?", "警告", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                if (MessageBox.Show("你必须移除 QCMA 备份目录内已存在的 bittersmile 备份. 如果你想保留它,请立刻手动转移.删除么?", "警告", MessageBoxButtons.YesNo) == DialogResult.Yes) {
                     FileSystem.DeleteDirectory(txtQCMA.Text + "\\APP\\" + txtAID.Text + "\\PCSG90096\\", DeleteDirectoryOption.DeleteAllContents);
                 } else {
                     throw new IOException("目录已存在");
                 }
             }
 
-            info("生成工作目录...");
-            if (FileSystem.FileExists(Reference.fpath_pkg2zip)) FileSystem.DeleteFile(Reference.fpath_pkg2zip);
-            Directory.CreateDirectory(Reference.path_data);
-            Directory.CreateDirectory(Reference.path_hencore);
-            Directory.CreateDirectory(Reference.path_psvimgtools);
-            Directory.CreateDirectory(Reference.path_downloads);
+            try {
+                info("生成工作目录...");
+                if (FileSystem.FileExists(Reference.fpath_pkg2zip)) FileSystem.DeleteFile(Reference.fpath_pkg2zip);
+                if (FileSystem.DirectoryExists(Reference.path_downloads + "app\\PCSG90096\\")) FileSystem.DeleteDirectory(Reference.path_downloads + "app\\PCSG90096\\", DeleteDirectoryOption.DeleteAllContents);
+                Directory.CreateDirectory(Reference.path_data);
+                Directory.CreateDirectory(Reference.path_hencore);
+                Directory.CreateDirectory(Reference.path_psvimgtools);
+                Directory.CreateDirectory(Reference.path_downloads);
+            } catch (UnauthorizedAccessException ex) {
+                //20020203
+                ErrorHandling.ShowError("20020203", "本程序没有对其安装目录的写入权限. 请尝试以管理员身份重新运行本程序.");
+            } catch (IOException ex) {
+                //20FF0204
+                ErrorHandling.ShowError("20FF0204", "意外错误: " + ex.Message);
+                throw ex;
+            } catch (Exception ex) {
+                //FFFF0205
+                ErrorHandling.ShowError("FFFF0205", "意外错误: " + ex.Message);
+                throw ex;
+            }
+
             incrementProgress();
         }
 
@@ -114,9 +143,28 @@ namespace auto_h_encore {
                 if (Global.fileOverrides[id] != null && Global.fileOverrides[id] != "") {
                     if (Global.fileOverrides[id] == Reference.raws[id]) info("文件 " + cleanName + " 在正确的位置, 跳过");
                     else {
-                        info("导入 " + cleanName);
-                        FileSystem.CopyFile(Global.fileOverrides[id], Reference.raws[id], true);
-                        info("      完成!");
+                        try {
+                            info("导入 " + cleanName);
+                            FileSystem.CopyFile(Global.fileOverrides[id], Reference.raws[id], true);
+                            info("      完成!");
+                        } catch (FileNotFoundException ex) {
+                            //20030205
+                            ErrorHandling.ShowError("20030205", "创建的文件丢失. 请重试 并且 不要碰程序目录.");
+                            throw ex;
+                        } catch (UnauthorizedAccessException ex) {
+                            //20020206
+                            ErrorHandling.ShowError("20020206", "本程序没有对其安装目录的写入权限. 请尝试以管理员身份重新运行本程序.");
+                            throw ex;
+                        } catch (IOException ex) {
+                            //20FF0207
+                            ErrorHandling.ShowError("20FF0207", "意外错误: " + ex.Message);
+                            throw ex;
+                        } catch (Exception ex) {
+                            //FFFF0208
+                            ErrorHandling.ShowError("FFFF0208", "意外错误: " + ex.Message);
+                            throw ex;
+                        }
+
                     }
                 } else {
                     Utility.DownloadFile(this, Reference.downloads[id], Reference.raws[id]);
@@ -139,6 +187,10 @@ namespace auto_h_encore {
             if (InvokeRequired) {
                 Invoke(new Action(() => {
                     btnStart.Enabled = state;
+                    btnImport.Enabled = state;
+                    cbxDelete.Enabled = state;
+                    cbxTrim.Enabled = state;
+                    lblHowToAID.Enabled = state;
                     txtAID.Enabled = state;
                     txtQCMA.Enabled = state;
                     btnBrowseQCMA.Enabled = state;
@@ -146,6 +198,10 @@ namespace auto_h_encore {
                 }));
             } else {
                 btnStart.Enabled = state;
+                btnImport.Enabled = state;
+                cbxDelete.Enabled = state;
+                cbxTrim.Enabled = state;
+                lblHowToAID.Enabled = state;
                 txtAID.Enabled = state;
                 txtQCMA.Enabled = state;
                 btnBrowseQCMA.Enabled = state;
@@ -180,7 +236,7 @@ namespace auto_h_encore {
                 
 
                 try {
-                    info("正在利用 pkg2zip 解包 bittersmile 试玩版...");
+                    info("利用 pkg2zip 解压 bittersmile demo...");
                     ProcessStartInfo psi = new ProcessStartInfo();
                     psi.WorkingDirectory = Reference.path_downloads;
                     psi.Arguments = "-x bittersmile.pkg";
@@ -189,22 +245,58 @@ namespace auto_h_encore {
                     process.WaitForExit();
                     info("      完成!");
                     incrementProgress();
-                } catch (FileNotFoundException) {
-                    MessageBox.Show("已下载文件丢失. 请重启本程序 并且 不要修改程序目录内文件.");
+                } catch (FileNotFoundException ex) {
+                    //20030209
+                    ErrorHandling.ShowError("20030209", "创建的文件丢失. 请重试 并且 不要碰程序目录.");
+                    toggleControls(true);
+                    return;
+                } catch (Exception ex) {
+                    //FFFF020A
+                    ErrorHandling.ShowError("FFFF020A", "意外错误: " + ex.Message);
                     toggleControls(true);
                     return;
                 }
 
+
                 if (cbxTrim.Checked) {
-                    info("删减 bitter smile 试玩版中...");
-                    string path = Reference.path_downloads + "app\\PCSG90096\\";
-                    FileSystem.DeleteFile(path + "resource\\movie\\Opening.mp4");
-                    foreach (string k in FileSystem.GetFiles(path + "resource\\sound\\bgm\\")) FileSystem.DeleteFile(k);
-                    FileSystem.DeleteDirectory(path + "resource\\sound\\voice\\01\\", DeleteDirectoryOption.DeleteAllContents);
-                    FileSystem.DeleteDirectory(path + "resource\\sound\\se\\", DeleteDirectoryOption.DeleteAllContents);
-                    FileSystem.DeleteDirectory(path + "resource\\image\\bg\\", DeleteDirectoryOption.DeleteAllContents);
-                    FileSystem.DeleteDirectory(path + "resource\\image\\tachie\\", DeleteDirectoryOption.DeleteAllContents);
-                    info("      Done!");
+                    try {
+                        info("删减 bitter smile demo 的多余内容...");
+                        string path = Reference.path_downloads + "app\\PCSG90096\\resource\\";
+                        foreach(string k in Reference.trims) {
+                            FileSystem.DeleteDirectory(path + k, DeleteDirectoryOption.DeleteAllContents);
+                        }
+                        info("      完成!");
+                    } catch (DirectoryNotFoundException ex) {
+                        //2001020B
+                        ErrorHandling.ShowError("2001020B", "创建的目录丢失. 请重试 并且 不要碰程序目录.");
+                        toggleControls(true);
+                        return;
+                    } catch (UnauthorizedAccessException ex) {
+                        //2002020C
+                        ErrorHandling.ShowError("2002020C", "本程序没有对其安装目录的写入权限. 请尝试以管理员身份重新运行本程序.");
+                        toggleControls(true);
+                        return;
+                    } catch (FileNotFoundException ex) {
+                        //2003020D
+                        ErrorHandling.ShowError("2003020D", "创建的文件丢失. 请重试 并且 不要碰程序目录.");
+                        toggleControls(true);
+                        return;
+                    } catch (InvalidDataException ex) {
+                        //2004020E
+                        ErrorHandling.ShowError("2004020E", "下载内容已损坏. 确保您的网络稳定, 然后重试.");
+                        toggleControls(true);
+                        return;
+                    } catch (IOException ex) {
+                        //20FF020F
+                        ErrorHandling.ShowError("20FF020F", "意外错误: " + ex.Message);
+                        toggleControls(true);
+                        return;
+                    } catch (Exception ex) {
+                        //FFFF0210
+                        ErrorHandling.ShowError("FFFF0210", "意外错误: " + ex.Message);
+                        toggleControls(true);
+                        return;
+                    }
                 }
 
                 try {
@@ -213,15 +305,33 @@ namespace auto_h_encore {
                         FileSystem.MoveFile(k, Reference.path_hencore + "\\h-encore\\app\\ux0_temp_game_PCSG90096_app_PCSG90096\\" + k.Split('\\').Last());
                     }
                 } catch (DirectoryNotFoundException ex) {
-                    MessageBox.Show("已建立的目录丢失. 请重启本程序 并且 不要修改程序目录内文件.");
+                    //20010211
+                    ErrorHandling.ShowError("20010211", "创建的目录丢失. 请重试 并且 不要碰程序目录.");
                     toggleControls(true);
                     return;
                 } catch (UnauthorizedAccessException ex) {
-                    MessageBox.Show("本程序无法写入工作目录. 请将本程序移动到你拥有读写权限的目录, 或者以管理员权限运行本程序.");
+                    //20020212
+                    ErrorHandling.ShowError("20020212", "本程序没有对其安装目录的写入权限. 请尝试以管理员身份重新运行本程序.");
+                    toggleControls(true);
+                    return;
+                } catch (FileNotFoundException ex) {
+                    //20030213
+                    ErrorHandling.ShowError("20030213", "创建的文件丢失. 请重试 并且 不要碰程序目录.");
+                    toggleControls(true);
+                    return;
+                } catch (InvalidDataException ex) {
+                    //20040214
+                    ErrorHandling.ShowError("20040214", "下载内容已损坏. 确保您的网络稳定, 然后重试.");
                     toggleControls(true);
                     return;
                 } catch (IOException ex) {
-                    MessageBox.Show("出现错误:\r\n\r\n" + ex.Message);
+                    //20FF0215
+                    ErrorHandling.ShowError("20FF0215", "意外错误: " + ex.Message);
+                    toggleControls(true);
+                    return;
+                } catch (Exception ex) {
+                    //FFFF0216
+                    ErrorHandling.ShowError("FFFF0216", "意外错误: " + ex.Message);
                     toggleControls(true);
                     return;
                 }
@@ -232,15 +342,33 @@ namespace auto_h_encore {
                         FileSystem.MoveDirectory(k, Reference.path_hencore + "\\h-encore\\app\\ux0_temp_game_PCSG90096_app_PCSG90096\\" + k.Split('\\').Last());
                     }
                 } catch (DirectoryNotFoundException ex) {
-                    MessageBox.Show("已建立的目录丢失. 请重启本程序 并且 不要修改程序目录内文件.");
+                    //20010217
+                    ErrorHandling.ShowError("20010217", "创建的目录丢失. 请重试 并且 不要碰程序目录.");
                     toggleControls(true);
                     return;
                 } catch (UnauthorizedAccessException ex) {
-                    MessageBox.Show("本程序无法写入工作目录. 请将本程序移动到你拥有读写权限的目录, 或者以管理员权限运行本程序.");
+                    //20020218
+                    ErrorHandling.ShowError("20020218", "本程序没有对其安装目录的写入权限. 请尝试以管理员身份重新运行本程序.");
+                    toggleControls(true);
+                    return;
+                } catch (FileNotFoundException ex) {
+                    //20030219
+                    ErrorHandling.ShowError("20030219", "创建的文件丢失. 请重试 并且 不要碰程序目录.");
+                    toggleControls(true);
+                    return;
+                } catch (InvalidDataException ex) {
+                    //2004021A
+                    ErrorHandling.ShowError("2004021A", "下载内容已损坏. 确保您的网络稳定, 然后重试.");
                     toggleControls(true);
                     return;
                 } catch (IOException ex) {
-                    MessageBox.Show("出现错误:\r\n\r\n" + ex.Message);
+                    //20FF021B
+                    ErrorHandling.ShowError("20FF021B", "意外错误: " + ex.Message);
+                    toggleControls(true);
+                    return;
+                } catch (Exception ex) {
+                    //FFFF021C
+                    ErrorHandling.ShowError("FFFF021C", "意外错误: " + ex.Message);
                     toggleControls(true);
                     return;
                 }
@@ -252,16 +380,29 @@ namespace auto_h_encore {
                     FileSystem.MoveFile(Reference.path_hencore + "\\h-encore\\app\\ux0_temp_game_PCSG90096_app_PCSG90096\\sce_sys\\package\\temp.bin", Reference.path_hencore + "\\h-encore\\license\\ux0_temp_game_PCSG90096_license_app_PCSG90096\\6488b73b912a753a492e2714e9b38bc7.rif");
                     info("      完成!");
                     incrementProgress();
-                } catch (DirectoryNotFoundException ex) {
-                    MessageBox.Show("已建立的目录丢失. 请重启本程序 并且 不要修改程序目录内文件.");
+                } catch (UnauthorizedAccessException ex) {
+                    //2002021D
+                    ErrorHandling.ShowError("2002021D", "本程序没有对其安装目录的写入权限. 请尝试以管理员身份重新运行本程序.");
                     toggleControls(true);
                     return;
-                } catch (UnauthorizedAccessException ex) {
-                    MessageBox.Show("本程序无法写入工作目录. 请将本程序移动到你拥有读写权限的目录, 或者以管理员权限运行本程序.");
+                } catch (FileNotFoundException ex) {
+                    //2003021E
+                    ErrorHandling.ShowError("2003021E", "创建的文件丢失. 请重试 并且 不要碰程序目录.");
+                    toggleControls(true);
+                    return;
+                } catch (InvalidDataException ex) {
+                    //2004021F
+                    ErrorHandling.ShowError("2004021F", "下载内容已损坏. 确保您的网络稳定, 然后重试.");
                     toggleControls(true);
                     return;
                 } catch (IOException ex) {
-                    MessageBox.Show("出现错误:\r\n\r\n" + ex.Message);
+                    //20FF0220
+                    ErrorHandling.ShowError("20FF0220", "意外错误: " + ex.Message);
+                    toggleControls(true);
+                    return;
+                } catch (Exception ex) {
+                    //FFFF0221
+                    ErrorHandling.ShowError("FFFF0221", "意外错误: " + ex.Message);
                     toggleControls(true);
                     return;
                 }
@@ -269,10 +410,10 @@ namespace auto_h_encore {
                 string encKey;
 
                 try {
-                    info("利用 AID " + txtAID.Text + "获取 CMA 解密 key ");
+                    info("使用AID " + txtAID.Text + "获取CMA加密密钥 ");
                     encKey = Utility.GetEncKey(txtAID.Text);
                     if (encKey.Length != 64) return;
-                    info("已获取 CMA 解密 key " + encKey);
+                    info("已得到CMA加密密钥 " + encKey);
                     incrementProgress();
                 } catch (Exception) {
                     toggleControls(true);
@@ -287,35 +428,53 @@ namespace auto_h_encore {
                 }
 
                 try {
-                    info("正在移动 h-encore 文件到 QCMA APP 备份目录...\r\n");
+                    info("将 h-encore 文件移动到 QCMA APP 目录...\r\n");
                     FileSystem.MoveDirectory(Reference.path_hencore + "h-encore\\PCSG90096\\", txtQCMA.Text + "\\APP\\" + txtAID.Text + "\\PCSG90096\\");
                     incrementProgress();
-                    info("auto h-encore 操作完成!!");
+                    info("自动 h-encore 完成!!");
                 } catch (DirectoryNotFoundException ex) {
-                    MessageBox.Show("找不到你的 QCMA 目录! 确保你选择了正确的目录,且该目录未被删除!");
+                    //20010222
+                    ErrorHandling.ShowError("20010222", "创建的目录丢失. 请重试 并且 不要碰程序目录.");
                     toggleControls(true);
                     return;
                 } catch (UnauthorizedAccessException ex) {
-                    MessageBox.Show("本程序无法写入你的 QCMA 备份目录. 请在 QCMA 设置界面修改该目录为你拥有读写权限的目录, 或者以管理员权限运行本程序, 或者禁用该目录的只读权限.");
+                    //20020223
+                    ErrorHandling.ShowError("20020223", "本程序没有对其安装目录的写入权限. 请尝试以管理员身份重新运行本程序.");
+                    toggleControls(true);
+                    return;
+                } catch (FileNotFoundException ex) {
+                    //20030224
+                    ErrorHandling.ShowError("20030224", "创建的文件丢失. 请重试 并且 不要碰程序目录.");
+                    toggleControls(true);
+                    return;
+                } catch (InvalidDataException ex) {
+                    //20040225
+                    ErrorHandling.ShowError("20040225", "下载内容已损坏. 确保您的网络稳定, 然后重试.");
                     toggleControls(true);
                     return;
                 } catch (IOException ex) {
-                    MessageBox.Show("出现错误:\r\n\r\n" + ex.Message);
+                    //20FF0226
+                    ErrorHandling.ShowError("20FF0226", "意外错误: " + ex.Message);
+                    toggleControls(true);
+                    return;
+                } catch (Exception ex) {
+                    //FFFF0227
+                    ErrorHandling.ShowError("FFFF0227", "意外错误: " + ex.Message);
                     toggleControls(true);
                     return;
                 }
 
-                Invoke(new Action(() => MessageBox.Show("即将完成 h-encore 安装:\r\n"
+                Invoke(new Action(() => MessageBox.Show("完成 h-encore 安装:\r\n"
                     + "1. 右键点击 QCMA 任务栏图标并选择刷新数据库\r\n"
-                    + "2. 用USB连接 你的电脑 和 PSV\r\n"
+                    + "2. 用USB连接你的电脑和 PSV\r\n"
                     + "3. 打开Vita端 内容管理 程序并点击 复制内容\r\n"
                     + "     如果 Vita 提示你需要更新系统, 关闭 Wifi 后重启 Vita\r\n"
-                    + "4. 在 内容管理 程序界面, 选择 PC -> PS Vita System\r\n"
+                    + "4. 在 内容管理 程序界面, 选择 电脑 -> PS Vita\r\n"
                     + "5. 选择 应用程序\r\n"
                     + "6. 选择 PS Vita\r\n"
                     + "7. 选择 h-encore 并点击 复制\r\n"
-                    + "8. 启动 h-encore 程序\r\n"
-                    + "     如果初次启动崩溃, 尝试重启Vita后再运行该程序\r\n\r\n"
+                    + "8. 启动主界面的 h-encore 程序\r\n"
+                    + "     如果初次启动崩溃, 尝试重启Vita后再运行该气泡\r\n\r\n"
                     + "完成!")));
 
                 toggleControls(true);
@@ -348,6 +507,10 @@ namespace auto_h_encore {
         private void btnImport_Click(object sender, EventArgs e) {
             FormFiles frm = new FormFiles();
             frm.ShowDialog();
+        }
+
+        private void lblIssueTracker_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            Process.Start(Reference.url_issues);
         }
     }
 }

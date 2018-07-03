@@ -38,6 +38,7 @@
             this.btnImport = new System.Windows.Forms.Button();
             this.cbxDelete = new System.Windows.Forms.CheckBox();
             this.cbxTrim = new System.Windows.Forms.CheckBox();
+            this.lblIssueTracker = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtAID
@@ -147,15 +148,18 @@
             // 
             // lblVersion
             // 
+            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVersion.Location = new System.Drawing.Point(326, 644);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(255, 12);
             this.lblVersion.TabIndex = 10;
-            this.lblVersion.Text = "auto h-encore version x";
+            this.lblVersion.Text = "自动化 h-encore 版本 x";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnImport
             // 
+            this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImport.Location = new System.Drawing.Point(12, 260);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(566, 21);
@@ -171,7 +175,7 @@
             this.cbxDelete.Name = "cbxDelete";
             this.cbxDelete.Size = new System.Drawing.Size(306, 16);
             this.cbxDelete.TabIndex = 12;
-            this.cbxDelete.Text = "删除已存在的文件 (如果之前的操作出错了，选择它)";
+            this.cbxDelete.Text = "删除已存在的文件 (如果之前的操作出错，请选择它)";
             this.cbxDelete.UseVisualStyleBackColor = true;
             // 
             // cbxTrim
@@ -181,16 +185,29 @@
             this.cbxTrim.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbxTrim.Location = new System.Drawing.Point(15, 285);
             this.cbxTrim.Name = "cbxTrim";
-            this.cbxTrim.Size = new System.Drawing.Size(498, 16);
+            this.cbxTrim.Size = new System.Drawing.Size(486, 16);
             this.cbxTrim.TabIndex = 13;
-            this.cbxTrim.Text = "删减 bitter smile 试玩版 的多余内容 (将 h-encore app 大小 从 240MB 减小至 17MB)";
+            this.cbxTrim.Text = "删减 bitter smile demo 的多余内容 (将 h-encore app 大小 从 240MB 减小至 13MB)";
             this.cbxTrim.UseVisualStyleBackColor = true;
+            // 
+            // lblIssueTracker
+            // 
+            this.lblIssueTracker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblIssueTracker.AutoSize = true;
+            this.lblIssueTracker.Location = new System.Drawing.Point(12, 644);
+            this.lblIssueTracker.Name = "lblIssueTracker";
+            this.lblIssueTracker.Size = new System.Drawing.Size(65, 12);
+            this.lblIssueTracker.TabIndex = 14;
+            this.lblIssueTracker.TabStop = true;
+            this.lblIssueTracker.Text = "问题追踪器";
+            this.lblIssueTracker.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblIssueTracker_LinkClicked);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 663);
+            this.Controls.Add(this.lblIssueTracker);
             this.Controls.Add(this.cbxTrim);
             this.Controls.Add(this.cbxDelete);
             this.Controls.Add(this.btnImport);
@@ -207,7 +224,7 @@
             this.Controls.Add(this.txtAID);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "自动化 h-encore 汉化By 多玩 天鹰叶寻";
+            this.Text = "自动化 h-encore 中文版";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,6 +246,7 @@
         private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.CheckBox cbxDelete;
         private System.Windows.Forms.CheckBox cbxTrim;
+        private System.Windows.Forms.LinkLabel lblIssueTracker;
     }
 }
 
