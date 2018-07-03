@@ -30,34 +30,34 @@
             // 
             // lblGuide
             // 
-            this.lblGuide.Location = new System.Drawing.Point(12, 9);
+            this.lblGuide.Location = new System.Drawing.Point(12, 8);
             this.lblGuide.Name = "lblGuide";
-            this.lblGuide.Size = new System.Drawing.Size(432, 241);
+            this.lblGuide.Size = new System.Drawing.Size(432, 222);
             this.lblGuide.TabIndex = 0;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(12, 253);
+            this.btnClose.Location = new System.Drawing.Point(12, 234);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(432, 23);
+            this.btnClose.Size = new System.Drawing.Size(432, 21);
             this.btnClose.TabIndex = 2;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "关闭";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // FormAID
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 288);
+            this.ClientSize = new System.Drawing.Size(456, 266);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblGuide);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(472, 327);
-            this.MinimumSize = new System.Drawing.Size(472, 327);
+            this.MaximumSize = new System.Drawing.Size(472, 305);
+            this.MinimumSize = new System.Drawing.Size(472, 305);
             this.Name = "FormAID";
-            this.Text = "Help";
+            this.Text = "帮助";
             this.ResumeLayout(false);
 
         }

@@ -9,8 +9,6 @@ using System.IO;
 using System.IO.Compression;
 using System.Windows.Forms;
 using System.Diagnostics;
-using Microsoft.VisualBasic.FileIO;
-using System.Security.Cryptography;
 
 namespace auto_h_encore {
     public static class Utility {
@@ -22,45 +20,46 @@ namespace auto_h_encore {
                 string page = http.GetStringAsync(Reference.url_cma + aid).Result;
                 return page.Substring(page.Length - 65, 64);
             } catch (Exception) {
-                MessageBox.Show("Failed to get the CMA encryption key");
+                MessageBox.Show("获取 CMA 解密 key 失败");
                 return "";
             }
         }
 
-        public static void DownloadFile(Form1 form, string url, string output) {
+        public static void DownloadFile(Form1 form, bool incrementProgress, string url, string output) {
             while (true)
                 try {
-                    form.info("Downloading " + output.Replace('/', '\\').Split('\\').Last());
+                    form.info("正在下载 " + output.Replace('/', '\\').Split('\\').Last());
                     web.DownloadFile(url, output);
-                    form.info("      Done!");
+                    form.info("      完成!");
+                    if (incrementProgress) form.incrementProgress();
                     return;
                 } catch (WebException ex) {
-                    if (MessageBox.Show("Failed to download file " + url + "\r\n\r\nMake sure your internet is connected and/or retry. If it still doesn't work, create an issue on the Github issue tracker.", "Error", MessageBoxButtons.RetryCancel) == DialogResult.Cancel)
+                    if (MessageBox.Show("下载失败 " + url + "\r\n\r\n确保已联网并重试. 如果依旧失败, 去 Github 提交错误报告.", "错误", MessageBoxButtons.RetryCancel) == DialogResult.Cancel)
                         throw ex;
                 }
         }
 
         public static void ExtractFile(Form1 form, bool incrementProgress, string filePath, string outputDirectory) {
             try {
-                form.info("Extracting " + filePath.Replace('/', '\\').Split('\\').Last());
+                form.info("解包 " + filePath.Replace('/', '\\').Split('\\').Last());
                 ZipFile.ExtractToDirectory(filePath, outputDirectory);
-                form.info("      Done!");
+                form.info("      完成!");
                 if (incrementProgress) form.incrementProgress();
                 return;
             } catch (DirectoryNotFoundException ex) {
-                MessageBox.Show("Directories that were created seem to have disappeared. Please relaunch the application and avoid touching the application directory.");
+                MessageBox.Show("已建立的目录消失了.请重启程序,不要修改其安装目录内任何文件.");
                 throw ex;
             } catch (UnauthorizedAccessException ex) {
-                MessageBox.Show("The application doesn't have write access to the directory it was installed in. Please move it to a directory you are own of, or rerun the application as Administrator.");
+                MessageBox.Show("本程序不具备其安装目录的写入权限.请将本程序移动到你拥有写入权限的目录,或者以管理员权限运行.");
                 throw ex;
             } catch (FileNotFoundException ex) {
-                MessageBox.Show("Files that were downloaded seem to have disappeared. Please relaunch the application and avoid touching the application directory.");
+                MessageBox.Show("已下载的文件消失了.请重启程序,不要修改其安装目录内任何文件.");
                 throw ex;
             } catch (IOException ex) {
-                MessageBox.Show("Something went wrong:\r\n\r\n" + ex.Message);
+                MessageBox.Show("出现错误:\r\n\r\n" + ex.Message);
                 throw ex;
             } catch (InvalidDataException ex) {
-                MessageBox.Show("A download was corrupt, please rerun the application and make sure your network is stable.");
+                MessageBox.Show("某项下载失败了, 请重启应用并确保网络连接正常.");
                 throw ex;
             }
 
@@ -68,41 +67,20 @@ namespace auto_h_encore {
 
         public static void PackageFiles(Form1 form, bool incrementProgress, string workingDirectory, string encryptionKey, string type) {
             try {
-                form.info("Packaging h-encore " + type + " using psvimgtools...");
+                form.info("打包 h-encore " + type + " 利用 psvimgtools...");
                 ProcessStartInfo psi = new ProcessStartInfo();
                 psi.WorkingDirectory = workingDirectory;
                 psi.FileName = Reference.path_psvimgtools + "psvimg-create.exe";
                 psi.Arguments = "-n " + type + " -K " + encryptionKey + " " + type + " PCSG90096/" + type;
                 Process process = Process.Start(psi);
                 process.WaitForExit();
-                form.info("      Done!");
-                form.incrementProgress();
+                form.info("      完成!");
+                if (incrementProgress) form.incrementProgress();
                 return;
             } catch (FileNotFoundException ex) {
-                MessageBox.Show("Files that were downloaded seem to have disappeared. Please relaunch the application and avoid touching the application directory.");
+                MessageBox.Show("已下载的文件消失了.请重启程序,不要修改其安装目录内任何文件.");
                 throw ex;
             }
         }
-
-        public static string BrowseFile(string title, string extension, string restrictions) {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = restrictions;
-            dialog.CheckFileExists = true;
-            dialog.CheckPathExists = true;
-            dialog.DefaultExt = extension;
-            dialog.Multiselect = false;
-            dialog.Title = title;
-            dialog.ShowDialog();
-            return dialog.FileName;
-        }
-
-        public static string MD5Checksum(string path) {
-            using (MD5 md5 = MD5.Create()) {
-                using (FileStream stream = File.OpenRead(path)) {
-                    return BitConverter.ToString(md5.ComputeHash(stream)).Replace("-", "").ToLower();
-                }
-            }
-        }
-
     }
 }
