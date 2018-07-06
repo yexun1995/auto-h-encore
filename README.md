@@ -3,7 +3,7 @@ A C# (.NET) application to automate (most of) the process of getting h-encore ru
 
 This application is **WINDOWS ONLY**.
 
-![screenshot](https://puu.sh/AQ17U/b204b8f5fa.png "screenshot")
+This is a UI Mod version.For personal use only.
 
 ## Features
 This application does everything short of installing QCMA/integrating libVitaMTP. That means:
