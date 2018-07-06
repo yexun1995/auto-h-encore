@@ -45,16 +45,16 @@
             // 
             this.txtAID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAID.Location = new System.Drawing.Point(12, 26);
+            this.txtAID.Location = new System.Drawing.Point(12, 62);
             this.txtAID.Name = "txtAID";
-            this.txtAID.Size = new System.Drawing.Size(565, 21);
+            this.txtAID.Size = new System.Drawing.Size(484, 21);
             this.txtAID.TabIndex = 0;
             this.txtAID.TextChanged += new System.EventHandler(this.txtAID_TextChanged);
             // 
             // lblAID
             // 
             this.lblAID.AutoSize = true;
-            this.lblAID.Location = new System.Drawing.Point(9, 11);
+            this.lblAID.Location = new System.Drawing.Point(10, 50);
             this.lblAID.Name = "lblAID";
             this.lblAID.Size = new System.Drawing.Size(101, 12);
             this.lblAID.TabIndex = 1;
@@ -100,7 +100,7 @@
             // lblQCMA
             // 
             this.lblQCMA.AutoSize = true;
-            this.lblQCMA.Location = new System.Drawing.Point(9, 50);
+            this.lblQCMA.Location = new System.Drawing.Point(10, 9);
             this.lblQCMA.Name = "lblQCMA";
             this.lblQCMA.Size = new System.Drawing.Size(137, 12);
             this.lblQCMA.TabIndex = 6;
@@ -110,7 +110,7 @@
             // 
             this.txtQCMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtQCMA.Location = new System.Drawing.Point(12, 65);
+            this.txtQCMA.Location = new System.Drawing.Point(12, 26);
             this.txtQCMA.Name = "txtQCMA";
             this.txtQCMA.Size = new System.Drawing.Size(484, 21);
             this.txtQCMA.TabIndex = 5;
@@ -119,7 +119,7 @@
             // btnBrowseQCMA
             // 
             this.btnBrowseQCMA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowseQCMA.Location = new System.Drawing.Point(502, 63);
+            this.btnBrowseQCMA.Location = new System.Drawing.Point(499, 26);
             this.btnBrowseQCMA.Name = "btnBrowseQCMA";
             this.btnBrowseQCMA.Size = new System.Drawing.Size(75, 21);
             this.btnBrowseQCMA.TabIndex = 7;
@@ -160,9 +160,9 @@
             // 
             this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImport.Location = new System.Drawing.Point(12, 260);
+            this.btnImport.Location = new System.Drawing.Point(12, 252);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(562, 22);
+            this.btnImport.Size = new System.Drawing.Size(562, 30);
             this.btnImport.TabIndex = 11;
             this.btnImport.Text = "I\'ve already download some or all of the files and would like to use them rather " +
     "than redownload them";
