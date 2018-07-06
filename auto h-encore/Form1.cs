@@ -356,5 +356,10 @@ namespace auto_h_encore {
         private void Form1_FormClosed(object sender, FormClosedEventArgs e) {
             Application.Exit();
         }
+
+        private void cbxTrim_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

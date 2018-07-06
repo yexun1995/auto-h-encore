@@ -21,7 +21,7 @@ namespace auto_h_encore {
 
         public static readonly string fpath_pkg2zip = path_downloads + "pkg2zip.exe";
         public static readonly string fpath_psvimagetools = path_psvimgtools + "psvimg-create.exe";
-
+        //Here can change the download links of files
         public static readonly string url_bittersmile = "http://ares.dl.playstation.net/cdn/JP0741/PCSG90096_00/xGMrXOkORxWRyqzLMihZPqsXAbAXLzvAdJFqtPJLAZTgOcqJobxQAhLNbgiFydVlcmVOrpZKklOYxizQCRpiLfjeROuWivGXfwgkq.pkg";
         public static readonly string url_psvimgtools = "https://github.com/yifanlu/psvimgtools/releases/download/v0.1/psvimgtools-0.1-win32.zip";
         public static readonly string url_pkg2zip = "https://github.com/mmozeiko/pkg2zip/releases/download/v1.8/pkg2zip_32bit.zip";
@@ -58,7 +58,7 @@ namespace auto_h_encore {
         public static readonly string[] paths = new string[] {
             path_hencore, path_downloads, path_psvimgtools
         };
-
+        //Here are the files deleted?
         public static readonly string[] trims = new string[] {
             "movie\\",
             "image\\bg\\",
