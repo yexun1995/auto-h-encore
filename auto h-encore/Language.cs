@@ -122,7 +122,7 @@ namespace auto_h_encore {
                 { "txtblock_BeforeRunning", "如果未安装 QCMA, 本程序将自动下载. 本程序也将自动启动和管理 QCMA 程序. 这意味着:\r\n    如果 QCMA 尚未安装:\r\n        本程序将下载 QCMA 供本地使用.\r\n        如果您选择通过 USB 传输, 将安装 USB驱动程序.\r\n    如果 QCMA 已安装:\r\n        将使用您现有的 QCMA 程序.\r\n        不会安装新的 USB 驱动程序, 也不会覆盖您的配置.\r\n\r\n基本上, 除非出现问题, 否则您不需要与 QCMA 交互. 如果您遇到问题, 请在问题追踪器提交报告. "},
                 { "txtblock_Import", "如果您已经下载了部分或全部必要文件, 并且不希望本程序重新下载它们, 则可以在此处选择要导入程序的文件." },
                 { "txtblock_USBInstructions", "立即连接您的 PS Vita.\r\n\r\n如果没有反应:\r\n1. 启动 PS Vita 上的内容管理程序\r\n2. 选择 复制内容\r\n3. 如果提示: 选择 PC 和 USB\r\n\r\n如果依旧不工作, 尝试重启电脑和 Vita 并重试 (以及重做上述过程).\r\n\r\n如果依旧不工作, 您或许需要手动安装 QCMA 并选择安装 libusbk 以外的驱动程序." },
-                { "txtblock_WifiInstructions", "在您的 PS Vita 端:\r\n1. 启动 内容管理 程序\r\n2. 选择 复制内容\r\n3. 选择 电脑\r\n4. 选择 Wi-Fi\r\n5. 选择您的 PC 的名称\r\n6. 输入 PC 上显示的代码\r\n7. 选择 添加 继续\r\n\r\n如果它不工作，请确保您的 Vita 和 PC 在同一网络上，或重新运行此应用程序并尝试 USB 连接。" },
+                { "txtblock_WifiInstructions", "在您的 PS Vita 端:\r\n1. 启动 内容管理 程序\r\n2. 选择 复制内容\r\n3. 选择 电脑\r\n4. 选择 Wi-Fi\r\n5. 选择您的 PC 的名称(如果不是第一次Wifi连接PC, 请先点击 添加设备 按钮)\r\n6. 输入 PC 上显示的代码\r\n7. 选择 添加 继续\r\n\r\n如果它不工作，请确保您的 Vita 和 PC 在同一网络上，或重新运行此应用程序并尝试 USB 连接。" },
 
                 { "btn_Import", "我已经下载了一部分或者全部必要的文件, 我想使用它们, 不要重新下载" },
                 { "btn_Ok", "确定" },
