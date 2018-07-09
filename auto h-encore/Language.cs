@@ -112,6 +112,7 @@ namespace auto_h_encore {
                 { "lbl_InstallingUSB", "正在安装 USB 驱动, 请稍候..." },
                 { "lbl_WifiProblems", "如果您的 Vita 报告需要更新系统, 关闭 Wifi 并重启 Vita. 这也意味着您在未更新系统前无法通过 Wifi 传送 h-encore!" },
 
+
                 { "status_NoFile", "未选择任何文件, 将开始下载." },
                 { "status_Invalid", "文件目录无效." },
                 { "status_Valid", "已选择文件且校验通过, 即将导入." },
@@ -124,6 +125,7 @@ namespace auto_h_encore {
                 { "txtblock_USBInstructions", "立即连接您的 PS Vita.\r\n\r\n如果没有反应:\r\n1. 启动 PS Vita 上的内容管理程序\r\n2. 选择 复制内容\r\n3. 如果提示: 选择 PC 和 USB\r\n\r\n如果依旧不工作, 尝试重启电脑和 Vita 并重试 (以及重做上述过程).\r\n\r\n如果依旧不工作, 您或许需要手动安装 QCMA 并选择安装 libusbk 以外的驱动程序." },
                 { "txtblock_WifiInstructions", "在您的 PS Vita 端:\r\n1. 启动 内容管理 程序\r\n2. 选择 复制内容\r\n3. 选择 电脑\r\n4. 选择 Wi-Fi\r\n5. 选择您的 PC 的名称(如果不是第一次Wifi连接PC, 请先点击 添加设备 按钮)\r\n6. 输入 PC 上显示的代码\r\n7. 选择 添加 继续\r\n\r\n如果它不工作，请确保您的 Vita 和 PC 在同一网络上，或重新运行此应用程序并尝试 USB 连接。" },
 
+
                 { "btn_Import", "我已经下载了一部分或者全部必要的文件, 我想使用它们, 不要重新下载" },
                 { "btn_Ok", "确定" },
                 { "btn_Close", "关闭" },
@@ -133,6 +135,7 @@ namespace auto_h_encore {
                 { "btn_Next", "下一步" },
                 { "btn_USB", "USB" },
                 { "btn_Wifi", "WiFi (仅限 3.68 版本系统)" },
+
 
                 { "cbx_Trim", "删减 bitter smile demo 的多余内容 (将 h-encore app 大小 从 240MB 减小到 13MB)" },
                 { "cbx_DeleteExisting", "删除已存在的文件 (如果之前的操作出错，请勾选它)" },
@@ -172,6 +175,7 @@ namespace auto_h_encore {
                 { "log_QCMARegistry", "正在导入 QCMA 注册表信息..." },
                 { "log_ScrubAID", "清除 AID 值" },
                 { "log_Prompt", "提醒用户提供信息..." },
+
                 { "log_Done", "        完成!" },
                 { "log_WipeFiles", "删除旧文件..." },
                 { "log_Import", "导入的文件 {0} 有效." },
@@ -202,10 +206,10 @@ namespace auto_h_encore {
                 { "lbl_ChooseLanguage", "Elegir idioma:" },
                 { "lbl_VersionText", "Versión de auto H-encore " },
                 { "lbl_Issues", "Seguimiento de incidencias" },
-				{ "lbl_ConnectionMethod", "How do you plan to connect your PS Vita to transfer h-encore?" },
-                { "lbl_UnplugVita", "If your Vita is plugged in, unplug it, then click next." },
-                { "lbl_InstallingUSB", "Installing USB driver, please wait..." },
-                { "lbl_WifiProblems", "If your Vita says you need to update your firmware, turn off Wifi and restart your Vita. This also means you cannot transfer h-encore over Wifi without updating!" },
+				        { "lbl_ConnectionMethod", "¿Cómo vas a conectar tu PS Vita para transferir H-encore?" },
+                { "lbl_UnplugVita", "Si tu PS Vita está conectada, desconéctala y pulsa siguiente." },
+                { "lbl_InstallingUSB", "Instalando driver del USB, por favor, espera..." },
+                { "lbl_WifiProblems", "Si tu PS Vita te pone que necesita actualizar tu firmware, apaga el Wifi y reinicia tu PS Vita. ¡Esto también significa que no puedes transferir H-encore por Wifi si no actualizas!" },
 
                 { "status_NoFile", "Ningún archivo seleccionado, se descargará el archivo." },
                 { "status_Invalid", "Ruta no válida." },
@@ -214,10 +218,10 @@ namespace auto_h_encore {
                 { "status_Override", "El hash no concuerda con el archivo, habilitado deshabilitar hash, se importará." },
                 { "status_Calculating", "Calculando archivo hash..." },
 
-                { "txtblock_BeforeRunning", "The application will automatically download QCMA if it is not installed. It will also automatically launch and manage it. That means:\r\n    If QCMA is not installed:\r\n        QCMA will be downloaded for local use by this program.\r\n        A USB driver will be installed if you choose to transfer via USB\r\n    If QCMA is installed:\r\n        Your existing QCMA installation will be used.\r\n        No new USB drivers will be installed, and your configuration will not be overwritten.\r\n\r\nBasically, you no longer need to interact with QCMA unless there are problems. If you have issues, please submit a report on the issue tracker."},
+                { "txtblock_BeforeRunning", "QCMA se descargará automáticamente si no está instalado. También lo ejecutará y lo administrará. Eso significa que:\r\n    Si QCMA no está instalado:\r\n        QCMA se descargará para el uso local de este programa.\r\n        Un driver USB se instalará si eliges transferir por USB.\r\n    Si QCMA está instalado:\r\n        Se usará la instalación de QCMA que tengas.\r\n        Ningún driver USB se instalará, y tu configuración no se sobrescribirá.\r\n\r\nBásicamente, no tienes que interactuar con QCMA a no ser que surja algún problema. Si tienes alguna incidencia, por favor envía un informe en el seguimiento de incidencias."},
                 { "txtblock_Import", "Si has descargado todos o algunos de los archivos, y no quieres que la aplicación los vuelva a descargar, aquí puedes seleccionar los archivos para que el programa los importe." },
-                { "txtblock_USBInstructions", "Connect your PS Vita now.\r\n\r\nIf nothing happens:\r\n1. Launch Content Manager on your PS Vita\r\n2. Select Copy Content\r\n3. If prompted: Select PC and USB\r\n\r\nIf it still doesn't work, try restarting your computer and PS Vita and retry (and do the steps above again).\r\n\r\nIf it still doesn't work, you may need to install QCMA manually and pick a driver other than libusbk." },
-                { "txtblock_WifiInstructions", "On your PS Vita:\r\n1. Launch Content Manager\r\n2. Select Copy Content\r\n3. Choose PC\r\n4. Choose Wifi\r\n5. Select the name of your PC\r\n6. Enter the code that appears on your PC\r\n7. Select Register\r\n\r\nIf it doesn't work, make sure your Vita and PC are on the same network, or rerun this application and try USB." },
+                { "txtblock_USBInstructions", "Ahora, conecta tu PS Vita.\r\n\r\nSi nada sucede:\r\n1. Usa el Gestor de Contenido en tu PS Vita\r\n2. Selecciona Copiar Contenido\r\n3. Si te da a elegir: Selecciona PC y USB\r\n\r\nSi sigue sin funcionar, intenta reiniciando tu PC y tu PS Vita y reinténtalo (y haz los pasos de antes otra vez).\r\n\r\nSi sigue sin funcionar, puede que tengas que instalar QCMA manualmente y elegir un driver que no sea libusbk." },
+                { "txtblock_WifiInstructions", "En tu PS Vita:\r\n1. Usa el Gestor de Contenido\r\n2. Selecciona Copiar Contenido\r\n3. Elige PC\r\n4. Elige Wifi\r\n5. Selecciona el nombre de tu PC\r\n6. Introduce el código que aparece en tu PC\r\n7. Selecciona Registrar\r\n\r\nSi no funciona, asegúrata que tu PS Vita y tu PC están en la misma red, o reinicia esta aplicación e inténtalo por USB." },
 
                 { "btn_Import", "Ya se descargaron todos o parte de los archivos y puedes usarlos o volverlos a descargar." },
                 { "btn_Ok", "OK" },
@@ -225,9 +229,9 @@ namespace auto_h_encore {
                 { "btn_Start", "Empezar" },
                 { "btn_Done", "Hecho" },
                 { "btn_Browse", "Navegar" },
-				{ "btn_Next", "Next" },
+				        { "btn_Next", "Siguiente" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "WiFi (Firmware 3.68 ONLY)" },
+                { "btn_Wifi", "WiFi (SOLO Firmware 3.68)" },
 				
                 { "cbx_Trim", "Eliminar contenido sobrante de la demo bitter smile (reduce el tamaño de app de H-encore de ~240MB a ~13MB)." },
                 { "cbx_DeleteExisting", "Borrar archivos existentes (haz esto si ha ocurrido algún error en el proceso)." },
@@ -237,7 +241,7 @@ namespace auto_h_encore {
                 { "browse_Generic", "Buscar " },
 
                 { "info_Finish",  "Para finalizar la instalación de H-encore:\r\n"
-                        + "1. Connect your PS Vita to your PC using Content Manager like you did before (if it isn't still connected)\r\n"
+                        + "1. Conecta tu PS Vita a tu PC usando Gestor de Contenido como antes (si no sigue conectada).\r\n"
                         + "     (Si pone que tienes que actualizar el firmware, apaga el wifi en tu PS Vita y reiniciala.)\r\n"
                         + "4. En Gestor Contenido, elige PC -> PS Vita.\r\n"
                         + "5. Selecciona Aplicaciones.\r\n"
@@ -260,13 +264,13 @@ namespace auto_h_encore {
                 { "error_Template", "Error {0}.\r\n\r\n{1}\r\n\r\nPor favor intenta de nuevo el proceso. Si no puedes solucionar esta incidencia, por favor crea una incidencia en el seguimiento de incidencias." },
                 { "error_Redownload",  "Error 1001-0105\r\n\r\nFallo al descargar el archivo {0}\r\n\r\nAsegúrate que tienes conexión a internet y/o inténtalo de nuevo. Si sigue sin funcionar, crea una incidencia en el seguimiento de incidencias de Github."},
 
-                { "log_SearchingForQCMA", "Searching for QCMA..." },
-                { "log_FoundQCMA", "Found QCMA." },
-                { "log_QCMANotFound", "QCMA not found, will download." },
-                { "log_KillingQCMA", "Killing any running QCMA processes..." },
-                { "log_QCMARegistry", "Importing QCMA registry information..." },
-                { "log_ScrubAID", "Scrubbing AID value" },
-                { "log_Prompt", "Prompting user for information..." },
+                { "log_SearchingForQCMA", "Buscando QCMA..." },
+                { "log_FoundQCMA", "Encontrado QCMA." },
+                { "log_QCMANotFound", "QCMA no encontrado, se descargará." },
+                { "log_KillingQCMA", "Eliminando procesos corriendo QCMA..." },
+                { "log_QCMARegistry", "Importando información de registro de QCMA..." },
+                { "log_ScrubAID", "Depurando valor de AID." },
+                { "log_Prompt", "Preguntando información del usuario..." },
                 { "log_Done", "        ¡Hecho!" },
                 { "log_WipeFiles", "Borrando archivos antigüos..." },
                 { "log_Import", "Importar archivo {0} válido." },
@@ -297,7 +301,7 @@ namespace auto_h_encore {
                { "lbl_ChooseLanguage", "Scegli la lingua:" },
                 { "lbl_VersionText", "versione auto h-encore " },
                 { "lbl_Issues", "Tracker dei problemi" },
-				{ "lbl_ConnectionMethod", "Come pensi di connettere la tua PS Vita al trasferimento di h-encore?" },
+				        { "lbl_ConnectionMethod", "In che modo vuoi connettere la tua PS Vita  per il trasferimento di h-encore?" },
                 { "lbl_UnplugVita", "Se la tua PSVita è collegata, scollegala, quindi fai clic su Avanti." },
                 { "lbl_InstallingUSB", "Installazione del driver USB, attendere prego..." },
                 { "lbl_WifiProblems", "Se la tua PSVita dice che devi aggiornare il tuo firmware, spegni la Wifi e riavvia la PSVita. Questo significa anche che non è possibile trasferire h-encore su Wifi senza aggiornamento!" },
@@ -309,11 +313,10 @@ namespace auto_h_encore {
                 { "status_Override", "File selezionato ma l'hash non corrisponde. Hash override abilitato, verrà importato." },
                 { "status_Calculating", "Calcolo dell'hash del file..." },
 
-                { "txtblock_BeforeRunning", "L'applicazione scaricherà automaticamente il QCMA se non è installato. Inoltre lo avvierà e lo gestirà automaticamente. Questo significa:\r\n    Se QCMA non è installato:\r\n        QCMA verrà scaricato per uso locale da questo programma.\r\n        Se si sceglie di trasferire tramite USB, verrà installato un driver USB\r\n    Se QCMA è installato:\r\n        Verrà utilizzata l'installazione del QCMA esistente.\r\n        Non verranno installati nuovi driver USB e la configurazione non verrà sovrascritta.\r\n\r\nBasically, you no longer need to interact with QCMA unless there are problems. If you have issues, please submit a report on the issue tracker."},
+                { "txtblock_BeforeRunning", "L'applicazione scaricherà automaticamente il QCMA se non è installato. Inoltre lo avvierà e lo gestirà automaticamente. Questo significa:\r\n    Se QCMA non è installato:\r\n        QCMA verrà scaricato per uso locale da questo programma.\r\n        Se si sceglie di trasferire tramite USB, verrà installato un driver USB\r\n    Se QCMA è installato:\r\n        Verrà utilizzata l'installazione del QCMA esistente.\r\n        Non verranno installati nuovi driver USB e la configurazione non verrà sovrascritta.\r\n\r\nFondamentalmente, non è più necessario interagire con QCMA, a meno che non ci sono problemi. Se avete problemi, invia una segnalazione su tracker dei problemi."},
                 { "txtblock_Import", "Se hai già scaricato alcuni o tutti i file necessari, e non vuoi che l'applicazione li scarichi di nuovo, qui puoi selezionare i file da importare per il programma." },
-
                 { "txtblock_USBInstructions", "Collegare ora la PS Vita.\r\n\r\nSe non accade nulla:\r\n1. Avviare Gestione Contenuto su PS Vita\r\n2. Selezionare copia contenuto\r\n3. Se richiesto: selezionare PC e USB\r\n\r\nSe ancora non funziona, provare a riavviare il computer e PS Vita e riprova (e ripetere i passaggi precedenti).\r\n\r\nSe ancora non funziona, potrebbe essere necessario installare manualmente QCMA e scegliere un driver diverso da libusbk." },
-                { "txtblock_WifiInstructions", "Su PS Vita:\r\n1. Avviare Gestione Contenuto\r\n2.Seleziona Copia contenuto\r\n3. Scegli PC\r\n4. Scegli Wifi\r\n5. Seleziona Registra\r\n6.Selezionare il nome del vostro PC\r\n7. Inserisci il codice che appare sul tuo PC\r\n\r\nSe non funziona, assicurarsi che la PSVita e il PC siano sulla stessa rete, o eseguire nuovamente questa applicazione e riprovare la USB." },
+                { "txtblock_WifiInstructions", "Su PS Vita:\r\n1. Avviare Gestione Contenuto\r\n2.Seleziona Copia contenuto\r\n3. Scegli PC\r\n4. Scegli Wifi\r\n5.Selezionare il nome del vostro PC\r\n6. Inserisci il codice che appare sul tuo PC\r\n\r\nSe non funziona, assicurarsi che la PSVita e il PC siano sulla stessa rete, o eseguire nuovamente questa applicazione e riprovare la USB." },
 
                 { "btn_Import", "Ho già scaricato alcuni o tutti i file e vorrei utilizzarli invece di riscaricarli" },
                 { "btn_Ok", "OK" },
@@ -321,9 +324,11 @@ namespace auto_h_encore {
                 { "btn_Start", "Start" },
                 { "btn_Done", "Fatto" },
                 { "btn_Browse", "Sfoglia" },
-				{ "btn_Next", "Avanti" },
+
+				        { "btn_Next", "Avanti" },
                 { "btn_USB", "USB" },
                 { "btn_Wifi", "WiFi (SOLO Firmware 3.68 )" },
+
 
                 { "cbx_Trim", "Ritaglia il contenuto in eccesso dalla demo bitter smile (riduce le dimensioni delle app h-encore da ~ 240 MB a ~ 13 MB)" },
                 { "cbx_DeleteExisting", "Elimina i file esistenti (fai questo se qualcosa è andato storto prima)" },
@@ -363,6 +368,7 @@ namespace auto_h_encore {
                 { "log_QCMARegistry", "Importazione delle informazioni del registro QCMA..." },
                 { "log_ScrubAID", "Scrubbing AID value" },
                 { "log_Prompt", "Richiesta delle informazioni utente in corso..." },
+
                 { "log_Done", "        Fatto!" },
                 { "log_WipeFiles", "Eliminazione dei vecchi file..." },
                 { "log_Import", "Importazione dei file per il file {0} valido." },
@@ -393,10 +399,11 @@ namespace auto_h_encore {
                 { "lbl_ChooseLanguage", "Выберите язык:" },
                 { "lbl_VersionText", "Версия auto h-encore " },
                 { "lbl_Issues", "Issue-трекер" },
-				{ "lbl_ConnectionMethod", "How do you plan to connect your PS Vita to transfer h-encore?" },
-                { "lbl_UnplugVita", "If your Vita is plugged in, unplug it, then click next." },
-                { "lbl_InstallingUSB", "Installing USB driver, please wait..." },
-                { "lbl_WifiProblems", "If your Vita says you need to update your firmware, turn off Wifi and restart your Vita. This also means you cannot transfer h-encore over Wifi without updating!" },
+
+				        { "lbl_ConnectionMethod", "Как вы хотите подключать PS Vita для переноса h-encore?" },
+                { "lbl_UnplugVita", "Если ваша Vita подключена, то отключите её и нажмите Далее." },
+                { "lbl_InstallingUSB", "Установка USB драйвера, пожалуйста подождите..." },
+                { "lbl_WifiProblems", "Если ваша Vita требует обновить прошивку, то выключите Wi-Fi и перезагрузите её. Также это означает, что вы не сможете перенести h-encore через Wi-Fi без обновления!" },
 
                 { "status_NoFile", "Файл не выбран и он будет загружен." },
                 { "status_Invalid", "Неверный путь к файлу." },
@@ -405,10 +412,11 @@ namespace auto_h_encore {
                 { "status_Override", "Файл выбран, но хэш не прошел проверку. Перерасчет хэша запущен и он будет импортирован." },
                 { "status_Calculating", "Расчет хэша файла..." },
                 
-                { "txtblock_BeforeRunning", "The application will automatically download QCMA if it is not installed. It will also automatically launch and manage it. That means:\r\n    If QCMA is not installed:\r\n        QCMA will be downloaded for local use by this program.\r\n        A USB driver will be installed if you choose to transfer via USB\r\n    If QCMA is installed:\r\n        Your existing QCMA installation will be used.\r\n        No new USB drivers will be installed, and your configuration will not be overwritten.\r\n\r\nBasically, you no longer need to interact with QCMA unless there are problems. If you have issues, please submit a report on the issue tracker."},
+
+                { "txtblock_BeforeRunning", "Программа автоматически установит QCMA, если вы не сделали этого сами. Она также сама запустит и настроит его. Это значит:\r\n    Если QCMA не установлен:\r\n        QCMA будет настроен и использован исключительно для использования с auto h-encore.\r\n        USB драйвер будет установлен, если вы выбрали перенос через USB.\r\n    Если QCMA уже установлен:\r\n        Будет использован существующий QCMA.\r\n        Новых USB драйверов не будет установлено и ваши настройки не будут изменены. \r\n\r\nВ принципе, вам больше не потребуется взаимодействовать с QCMA до тех пор, пока не возникнут проблемы. Если проблемы все-таки возникнут, то сообщите об этом в issue-трекере."},
                 { "txtblock_Import", "Если вы заранее установили все нужные файлы и не хотите чтоб программа снова их установила, то здесь вы можете выбрать уже имеющиеся файлы." },
-                { "txtblock_USBInstructions", "Connect your PS Vita now.\r\n\r\nIf nothing happens:\r\n1. Launch Content Manager on your PS Vita\r\n2. Select Copy Content\r\n3. If prompted: Select PC and USB\r\n\r\nIf it still doesn't work, try restarting your computer and PS Vita and retry (and do the steps above again).\r\n\r\nIf it still doesn't work, you may need to install QCMA manually and pick a driver other than libusbk." },
-                { "txtblock_WifiInstructions", "On your PS Vita:\r\n1. Launch Content Manager\r\n2. Select Copy Content\r\n3. Choose PC\r\n4. Choose Wifi\r\n5. Select the name of your PC\r\n6. Enter the code that appears on your PC\r\n7. Select Register\r\n\r\nIf it doesn't work, make sure your Vita and PC are on the same network, or rerun this application and try USB." },
+                { "txtblock_USBInstructions", "Подключите вашу PS Vita.\r\n\r\nЕсли ничего не происходит:\r\n1. Запустите Управление даннными на вашей PS Vita\r\n2. Выберите Скопировать данные\r\n3. Если все прошло успешно: выберите Компьютер и Кабель USB\r\n\r\nЕсли все равно ничего не работает, попробуйте перезапустить компьютер и PS Vita,и попробуйте заново (и все шаги с самого начала).\r\n\r\nЕсли не работает даже так, вам нужно установить QCMA самостоятельно, и установить любой драйвер кроме libusbk." },
+                { "txtblock_WifiInstructions", "На вашей PS Vita:\r\n1. Запустите Управление даннными\r\n2. Выберите Скопировать данные\r\n3. Выберите Компьютер\r\n4. Выберите Wi-Fi\r\n5. Выберите ваш компьютер\r\n6. Напишите появившийся код на компьютере \r\n7.Нажмите Зарегестрировать\r\n\r\nЕсли это не сработало, убедитесь что Vita и компьютер находятся в одной локальной сети, или перезапустите auto h-encore и попробуйте USB режим." },
 
                 { "btn_Import", "Я уже загрузил некоторые или все файлы и хотел бы использовать их, а не загружать их заново." },
                 { "btn_Ok", "OK" },
@@ -416,9 +424,11 @@ namespace auto_h_encore {
                 { "btn_Start", "Начать" },
                 { "btn_Done", "Готово" },
                 { "btn_Browse", "Обзор" },
-				{ "btn_Next", "Next" },
+
+				        { "btn_Next", "Далее" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "WiFi (Firmware 3.68 ONLY)" },
+                { "btn_Wifi", "Wi-Fi (Только прошивка 3.68)" },
+
               
                 { "cbx_Trim", "Обрезать лишний контент из bittersmile demo (размер h-encore уменьшается с ~240MБ до ~13MБ)" },
                 { "cbx_DeleteExisting", "Удаление лишних файлов (сделайте это, если ранее что-то пошло не так)" },
@@ -428,13 +438,13 @@ namespace auto_h_encore {
                 { "browse_Generic", "Обзор " },
 
                 { "info_Finish",  "Чтобы закончить установку h-encore:\r\n"
-                        + "1. Connect your PS Vita to your PC using Content Manager like you did before (if it isn't still connected)\r\n"
+                        + "1. Подключите PS Vita к PC используя Управление данными, если она еще не подключена (так же, как вы делали ранее)\r\n"
                         + "     Если требуется обновить прошивку, то выключите Wi-Fi на Vita и перезагрузите её\r\n"
-                        + "4. В Управлении данными, нажмите Компьютер -> Система PS Vita\r\n"
-                        + "5. Нажмите Приложения\r\n"
-                        + "6. Нажмите PS Vita\r\n"
-                        + "7. Выберите h-encore и нажмите Скопировать\r\n"
-                        + "8. Запустите h-encore в LiveArea\r\n"
+                        + "2. В Управлении данными нажмите Компьютер -> Система PS Vita\r\n"
+                        + "3. Нажмите Приложения\r\n"
+                        + "4. Нажмите PS Vita\r\n"
+                        + "5. Выберите h-encore и нажмите Скопировать\r\n"
+                        + "6. Запустите h-encore в LiveArea\r\n"
                         + "     Если h-encore вылетает, то перезагрузите PS Vita и попробуйте снова\r\n\r\n"
                         + "Готово!"},
 
@@ -451,13 +461,13 @@ namespace auto_h_encore {
                 { "error_Template", "Произошла ошибка {0}.\r\n\r\n{1}\r\n\r\nПовторите процесс. Если вы не можете решить проблему, пожалуйста, создайте issue в issue-трекере с этим кодом ошибки." },
                 { "error_Redownload",  "Ошибка 1001-0105\r\n\r\nНе удалось установить файл {0}\r\n\r\nПроверьте подключение к интернету и попробуйте снова. Если все в порядке, а ошибка не пропадает, то создайте issue на GitHub."},
 
-                { "log_SearchingForQCMA", "Searching for QCMA..." },
-                { "log_FoundQCMA", "Found QCMA." },
-                { "log_QCMANotFound", "QCMA not found, will download." },
-                { "log_KillingQCMA", "Killing any running QCMA processes..." },
-                { "log_QCMARegistry", "Importing QCMA registry information..." },
-                { "log_ScrubAID", "Scrubbing AID value" },
-                { "log_Prompt", "Prompting user for information..." },
+                { "log_SearchingForQCMA", "Поиск QCMA..." },
+                { "log_FoundQCMA", "QCMA найден." },
+                { "log_QCMANotFound", "QCMA не найден, он будет загружен." },
+                { "log_KillingQCMA", "Убийство всех процессов QCMA..." },
+                { "log_QCMARegistry", "Импорт данных реестра QCMA..." },
+                { "log_ScrubAID", "Очистка AID" },
+                { "log_Prompt", "Запрос информации пользователя..." },
                 { "log_Done", "        Готово!" },
                 { "log_WipeFiles", "Удаление старых файлов..." },
                 { "log_Import", "Импорт файла для {0} прошел успешно." },
@@ -493,6 +503,7 @@ namespace auto_h_encore {
                 { "lbl_InstallingUSB", "Instalando driver USB, por favor aguarde..." },
                 { "lbl_WifiProblems", "Se seu Vita disser que precisa atualizar o firmware, desligue o Wifi e reinicie seu Vita. Isso também significa que você não pode transferir o h-encore através do Wifi sem atualizar!" },
 
+
                 { "status_NoFile", "Nenhum arquivo selecionado, vai baixar." },
                 { "status_Invalid", "Caminho do arquivo inválido." },
                 { "status_Valid", "Arquivo selecionado e hash corresponde, vai importar." },
@@ -503,7 +514,7 @@ namespace auto_h_encore {
                 { "txtblock_BeforeRunning", "O aplicativo irá baixar automaticamente o QCMA caso ainda não esteja instalado. O aplicativo irá abrir o QCMA e configurar automaticamente. Isso significa:\r\n    Se o QCMA não está instalado:\r\n        QCMA será baixado para uso local por esse programa.\r\n        Um driver USB será instalado se você escolher transferir por USB\r\n    Se o QCMA está instalado:\r\n        Sua instalação existente do QCMA será utilizada.\r\n        Nenhum driver USB será instalado e suas configurações não serão reescritas.\r\n\rBasicamente, você não precisa mais interagir com o QCMA a não ser que tenha problemas. Se tiver problemas, por favor reporte ao Rastreador de Erros."},
                 { "txtblock_Import", "Se você já baixou algum ou todos os arquivos necessários, e não quer que baixe novamente, você pode selecioná-los aqui, para que seja feita a importação." },
                 { "txtblock_USBInstructions", "Conecte seu PS Vita agora.\r\n\r\nSe nada acontecer:\r\n1. Abra o Gerenciador de Conteúdo no seu PS Vita\r\n2. Selecione Copiar Conteúdo\r\n3. Se solicitado: Selecione PC e USB\r\n\r\nSe ainda não funcionar, tente reiniciar seu computador e seu PS Vita e tente novamente (refaça os passos acima).\r\n\r\nSe ainda não funcionar, você deverá instalar o QCMA manualmente e escolher um driver usb que não seja o libusbk." },
-                { "txtblock_WifiInstructions", "No seu PS Vita:\r\n1. Abra o Gerenciador de Conteúdo\r\n2. Selecione Copiar Conteúdo\r\n3. Escolha PC\r\n4. Escolha Wifi\r\n5. Escolha Registrar\r\n6.Selecione o nome do seu PC\r\n7. Coloque o código que aparece no seu PC\r\n\r\nSe não funcionar, tenha certeza que seu Vita e PC estão na mesma rede, ou reabra o aplicativo e tente por USB." },
+                { "txtblock_WifiInstructions", "No seu PS Vita:\r\n1. Abra o Gerenciador de Conteúdo\r\n2. Selecione Copiar Conteúdo\r\n3. Escolha PC\r\n4. Escolha Wifi\r\n5.Selecione o nome do seu PC\r\n6. Coloque o código que aparece no seu PC\r\n\r\nSe não funcionar, tenha certeza que seu Vita e PC estão na mesma rede, ou reabra o aplicativo e tente por USB." },
 
                 { "btn_Import", "Eu já baixei um ou todos os arquivos e gostaria de usá-los ao invés de baixá-los novamente" },
                 { "btn_Ok", "OK" },
@@ -525,11 +536,11 @@ namespace auto_h_encore {
                 { "info_Finish",  "Para finalizar a instalação do h-encore:\r\n"
                         + "1. Conecte seu PS Vita no seu PC usando o Gerenciador de Conteúdo como fez anteriormente (se ainda não foi conectado)\r\n"
                         + "     Se seu VITA disser que precisa atualizar, desligue o Wifi no seu Vita e reinicie o Vita\r\n"
-                        + "4. No Gerenciador de Conteúdo, escolha PC -> Sistema PS Vita\r\n"
-                        + "5. Selecione Aplicações\r\n"
-                        + "6. Selecione PS Vita\r\n"
-                        + "7. Selecione h-encore e clique em Copiar\r\n"
-                        + "8. Abra o app h-encore na sua Live Area\r\n"
+                        + "2. No Gerenciador de Conteúdo, escolha PC -> Sistema PS Vita\r\n"
+                        + "3. Selecione Aplicações\r\n"
+                        + "4. Selecione PS Vita\r\n"
+                        + "5. Selecione h-encore e clique em Copiar\r\n"
+                        + "6. Abra o app h-encore na sua Live Area\r\n"
                         + "     Se travar na primeira vez, tente reiniciar seu Vita e inicie o app de novo\r\n\r\n"
                         + "Está feito!"},
 
@@ -583,23 +594,22 @@ namespace auto_h_encore {
                 { "lbl_ChooseLanguage", "Choisis la langue :" },
                 { "lbl_VersionText", "auto h-encore version " },
                 { "lbl_Issues", "Issue Tracker" },
-				        { "lbl_ConnectionMethod", "How do you plan to connect your PS Vita to transfer h-encore?" },
-                { "lbl_UnplugVita", "If your Vita is plugged in, unplug it, then click next." },
-                { "lbl_InstallingUSB", "Installing USB driver, please wait..." },
-                { "lbl_WifiProblems", "If your Vita says you need to update your firmware, turn off Wifi and restart your Vita. This also means you cannot transfer h-encore over Wifi without updating!" },
+				        { "lbl_ConnectionMethod", "Comment vous voulez connecter votre Vita pour transférer h-encore ?" },
+                { "lbl_UnplugVita", "Si votre Vita est branché, débranché la, et cliquer sur suivant." },
+                { "lbl_InstallingUSB", "Installation du pilote USB, Veuillez patientez svp..." },
+                { "lbl_WifiProblems", "Si Votre Vita demande une mise à jour du firmware, veuillez désactiver la connexion Wifi et redémarré là. Ça signifie aussi que vous ne pouvez pas transférer h-encore via Wifi sans mettre à jour votre Vita !" },
 
                 { "status_NoFile", "Aucun fichier n’a été sélectionné, pour être téléchargé." },
-
                 { "status_Invalid", "Le chemin du fichier est invalide." },
                 { "status_Valid", "Le fichier sélectionné et le Hash correspondent, importation." },
                 { "status_BadHash", "Le fichier sélectionné et le Hash ne correspondent pas, pas d’importation." },
                 { "status_Override", "Le fichier sélectionné et le Hash ne correspondant pas, mais le forcing est activé, importation." },
                 { "status_Calculating", "Calcul du Hash du fichier..." },
                 
-                { "txtblock_BeforeRunning", "The application will automatically download QCMA if it is not installed. It will also automatically launch and manage it. That means:\r\n    If QCMA is not installed:\r\n        QCMA will be downloaded for local use by this program.\r\n        A USB driver will be installed if you choose to transfer via USB\r\n    If QCMA is installed:\r\n        Your existing QCMA installation will be used.\r\n        No new USB drivers will be installed, and your configuration will not be overwritten.\r\n\r\nBasically, you no longer need to interact with QCMA unless there are problems. If you have issues, please submit a report on the issue tracker."},
+                { "txtblock_BeforeRunning", "Cette application va télécharger QCMA automatiquement s'il n'est pas déjà installé. Elle va aussi le lancer et le contrôler. Ça veut dire:\r\n    Si QCMA n'est pas installé : \r\n        QCMA va être téléchargé pour un usage local par cette application. \r\n        Un pilote USB va être installé si vous choisirez de transférer via USB\r\n    Si QCMA est installé : \r\n        Votre installation QCMA existante va être utilisée. \r\n        Aucun pilote USB va être installé, et votre configuration ne va pas être modifiée. \r\n\r\nVous n'avez plus besoin d'interagir avec QCMA sauf s'il y a des problèmes. Si vous avez un problème, Veuillez soumettre un rapport dans l'issue Tracker."},
                 { "txtblock_Import", "Si vous avez déjà téléchargé une partie ou tous les fichiers nécessaires, et que vous ne voulez pas que l’application les télécharge à nouveau, vous pouvez la sélectionner ici pour que le programme les importe." },
-                { "txtblock_USBInstructions", "Connect your PS Vita now.\r\n\r\nIf nothing happens:\r\n1. Launch Content Manager on your PS Vita\r\n2. Select Copy Content\r\n3. If prompted: Select PC and USB\r\n\r\nIf it still doesn't work, try restarting your computer and PS Vita and retry (and do the steps above again).\r\n\r\nIf it still doesn't work, you may need to install QCMA manually and pick a driver other than libusbk." },
-                { "txtblock_WifiInstructions", "On your PS Vita:\r\n1. Launch Content Manager\r\n2. Select Copy Content\r\n3. Choose PC\r\n4. Choose Wifi\r\n5. Select the name of your PC\r\n6. Enter the code that appears on your PC\r\n7. Select Register\r\n\r\nIf it doesn't work, make sure your Vita and PC are on the same network, or rerun this application and try USB." },
+                { "txtblock_USBInstructions", "Connecter Votre PS Vita maintenant. \r\n\r\nSi rien ne se passe:\r\n1. Lancer le gestionnaire de contenu sur votre PS Vita \r\n2. Sélectionner Copier Du Contenu\r\n3. Si Demandé : Sélectionner PC et USB\r\n\r\nSi ça ne marche toujours pas, essayer de redémarrer Pc et votre Vita et ressayer (refaite les même étapes a nouveau).\r\n\r\nSi ça ne marche toujours pas, installer manuellement QCMA et sélectionner un autre pilote autre que libusbk." },
+                { "txtblock_WifiInstructions", "Sur votre PS Vita:\r\n1. Lancer le gestionnaire de contenu sur votre PS Vita \r\n2. Sélectionner Copier Du Contenu\r\n3. Choisir PC\r\n4. Choisir Wifi\r\n5.Choisir votre PC\r\n6. Enter le code qui apparait sur votre PC\r\n\r\nSi ça ne marche pas, vérifier que votre PS Vita et votre PC sont sur le même réseau, ou relancer cette application et essayer la méthode USB." },
 
                 { "btn_Import", "J'ai déjà téléchargé une partie ou tous les fichiers et je préfère les utiliser que de les télécharger à nouveau." },
                 { "btn_Ok", "OK" },
@@ -607,25 +617,25 @@ namespace auto_h_encore {
                 { "btn_Start", "Démarrer" },
                 { "btn_Done", "Fini" },
                 { "btn_Browse", "Parcourir" },
-				{ "btn_Next", "Next" },
+		{ "btn_Next", "Suivant" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "WiFi (Firmware 3.68 ONLY)" },
+                { "btn_Wifi", "Wi-Fi (Firmware 3.68 SEULEMENT)" },
 
-                { "cbx_Trim", "Réduit l’excès de contenu depuis la démo bitter smile (réduire la taille de l'application h-encore de ~240MB a ~13MB)" },
-                { "cbx_DeleteExisting", "Supprimer les fichiers existants (Faites ceci si vous avez une erreur)" },
+                { "cbx_Trim", "Réduit l’excès de contenu de la démo bitter smile (réduire la taille de l'application h-encore de ~240MB a ~13MB)" },
+                { "cbx_DeleteExisting", "Supprimer les fichiers existants (Faites ceci en cas d'erreur)" },
                 { "cbx_OverrideHashes", "Ignorer les Hashes non conformes" },
 
                 { "browse_QCMA", "Trouve le répertoire QCMA PS Vita (Trouvez ceci dans les paramètres de QCMA sous Applications / Backups)" },
                 { "browse_Generic", "Parcourir pour " },
 
                 { "info_Finish",  " Pour finir l'installation de h-encore:\r\n"
-                        + "1. Connect your PS Vita to your PC using Content Manager like you did before (if it isn't still connected)\r\n"
+                        + "1. Connectez votre PS Vita sur Votre PC avec le Gestionnaire de Contenu comme auparavant (si elle n'est toujours pas connectée)\r\n"
                         + "     Si votre Vita demande une mise à jour, désactiver le wifi dans la Vita et redémarrer la\r\n"
                         + "4. Dans le gestionnaire de contenu, choisir PC -> PS Vita System\r\n"
                         + "5. Choisir Applications\r\n"
                         + "6. Choisir PS Vita\r\n"
                         + "7. Choisir h-encore et appuyez sur Copier\r\n"
-                        + "8. Exécutez la bulle h-encore app depuis Le Live Area\r\n"
+                        + "8. Exécutez la bulle h-encore app depuis Live Area\r\n"
                         + "     Si ça plante à la 1ere utilisation, redémarrer votre Vita et lancez la bulle de nouveau\r\n\r\n"
                         + "Fini !"},
 
@@ -642,13 +652,13 @@ namespace auto_h_encore {
                 { "error_Template", "Erreur {0} apparue. \r\n\r\n{1}\r\n\r\n Réessayez le processus. Si vous ne pouvez pas résoudre ce problème, S'il vous plait créez un rapport d'erreur dans l'Issue Tracker avec ce code d'erreur." },
                 { "error_Redownload",  "Erreur 1001-0105\r\n\r\n Impossible de télécharger le fichier {0}\r\n\r\n Assurer vous que vous êtes connecté à internet et réessayez. Si ça ne marche toujours pas, s'il vous plait créez un rapport d'erreur sur le GitHub de l'application."},
 
-                { "log_SearchingForQCMA", "Searching for QCMA..." },
-                { "log_FoundQCMA", "Found QCMA." },
-                { "log_QCMANotFound", "QCMA not found, will download." },
-                { "log_KillingQCMA", "Killing any running QCMA processes..." },
-                { "log_QCMARegistry", "Importing QCMA registry information..." },
-                { "log_ScrubAID", "Scrubbing AID value" },
-                { "log_Prompt", "Prompting user for information..." },
+                { "log_SearchingForQCMA", "Recherche de QCMA..." },
+                { "log_FoundQCMA", "QCMA Trouvé." },
+                { "log_QCMANotFound", "QCMA introuvable, Téléchargement." },
+                { "log_KillingQCMA", "Fermeture des processus QCMA..." },
+                { "log_QCMARegistry", "Importation des information QCMA depuis le registre..." },
+                { "log_ScrubAID", "Nettoyage de la valeur AID" },
+                { "log_Prompt", "Demande d'information a l’utilisateur..." },
                 { "log_Done", "        Fini !" },
                 { "log_WipeFiles", "Suppression des anciens fichiers..." },
                 { "log_Import", "Importation de fichier pour le fichier {0} valide." },
@@ -657,9 +667,9 @@ namespace auto_h_encore {
                 { "log_NotDownloaded", "Fichier {0} pas encore téléchargé ou bien importé, téléchargement." },
                 { "log_WorkingDirs", "Génération des répertoires temporaires..." },
                 { "log_CorrectLocation", "Fichier {0} dans le bon répertoire, saut du fichier." },
-                { "log_Importing", "Importation {0}" },
-                { "log_Downloading", "Téléchargement {0}" },
-                { "log_Extracting", "Extraction {0}" },
+                { "log_Importing", "Importation de {0}" },
+                { "log_Downloading", "Téléchargement de {0}" },
+                { "log_Extracting", "Extraction de {0}" },
                 { "log_ExtractingPKG", "Extraction de la démo bittersmile avec pkg2zip..." },
                 { "log_Trimming", "Suppression des fichiers non nécessaires de la demo bittersmile..." },
                 { "log_MoveToHencore", "Déplacement de {0} a le répertoire temporaire de h-encore..." },
@@ -679,10 +689,10 @@ namespace auto_h_encore {
                 { "lbl_ChooseLanguage", "Wähle eine Sprache:" },
                 { "lbl_VersionText", "auto h-encore version " },
                 { "lbl_Issues", "Issue Tracker" },
-				        { "lbl_ConnectionMethod", "How do you plan to connect your PS Vita to transfer h-encore?" },
-                { "lbl_UnplugVita", "If your Vita is plugged in, unplug it, then click next." },
-                { "lbl_InstallingUSB", "Installing USB driver, please wait..." },
-                { "lbl_WifiProblems", "If your Vita says you need to update your firmware, turn off Wifi and restart your Vita. This also means you cannot transfer h-encore over Wifi without updating!" },
+				        { "lbl_ConnectionMethod", "Wie möchtest du deine PS Vita verbinden, um h-encore zu übertragen?" },
+                { "lbl_UnplugVita", "Wenn deine Vita am PC angeschlossen ist, entferne sie und klicke dann auf Weiter." },
+                { "lbl_InstallingUSB", "USB Treiber wird installiert, bitte warten..." },
+                { "lbl_WifiProblems", "Wenn deine Vita ein Update ausführen möchte, deaktiviere WiFi und starte deine Vita neu. Das bedeutet auch, dass du h-encore nicht über WiFi übertragen kannst, ohne ein Update durchzuführen!" },
 
                 { "status_NoFile", "Keine Datei ausgewählt, wird heruntergeladen." },
                 { "status_Invalid", "Dateipfad ist ungültig." },
@@ -691,10 +701,10 @@ namespace auto_h_encore {
                 { "status_Override", "Datei ausgewählt, aber Hash stimmt nicht überein. Übergehen des Hashs aktiviert, Datei wird importiert." },
                 { "status_Calculating", "Berechne Hash..." },
 
-                { "txtblock_BeforeRunning", "The application will automatically download QCMA if it is not installed. It will also automatically launch and manage it. That means:\r\n    If QCMA is not installed:\r\n        QCMA will be downloaded for local use by this program.\r\n        A USB driver will be installed if you choose to transfer via USB\r\n    If QCMA is installed:\r\n        Your existing QCMA installation will be used.\r\n        No new USB drivers will be installed, and your configuration will not be overwritten.\r\n\r\nBasically, you no longer need to interact with QCMA unless there are problems. If you have issues, please submit a report on the issue tracker."},
+                { "txtblock_BeforeRunning", "Die Anwendung wird automatisch QCMA herunterladen, sollte es nicht installiert sein. Außerdem wird sie es automatisch starten und verwalten. Das bedeutet:\r\n    Wenn QCMA nicht installiert ist:\r\n    QCMA wird für die lokale Nutzung dieses Programms heruntergeladen.\r\n    Ein USB Treiber wird installiert, falls du die Übertragung via USB wählst.\r\n    Wenn QCMA installiert ist:\r\n    Deine existierende QCMA-Installation wird genutzt.\r\n    Keine neuen Treiber werden installiert und deine Einstellungen werden nicht überschrieben.\r\n\r\nDu musst nicht mehr mit QCMA interagieren, außer es gibt Probleme. Wenn die Schwierigkeiten hast, füge bitte ein Issue im Issue Tracker hinzu."},
                 { "txtblock_Import", "Wenn du bereits einige oder alle der benötigten Dateien heruntergeladen hast und du nicht möchtest, dass das Programm sie erneut herunterlädt, dann kannst du sie hier auswählen, damit das Programm sie importiert." },
-                { "txtblock_USBInstructions", "Connect your PS Vita now.\r\n\r\nIf nothing happens:\r\n1. Launch Content Manager on your PS Vita\r\n2. Select Copy Content\r\n3. If prompted: Select PC and USB\r\n\r\nIf it still doesn't work, try restarting your computer and PS Vita and retry (and do the steps above again).\r\n\r\nIf it still doesn't work, you may need to install QCMA manually and pick a driver other than libusbk." },
-                { "txtblock_WifiInstructions", "On your PS Vita:\r\n1. Launch Content Manager\r\n2. Select Copy Content\r\n3. Choose PC\r\n4. Choose Wifi\r\n5. Select the name of your PC\r\n6. Enter the code that appears on your PC\r\n7. Select Register\r\n\r\nIf it doesn't work, make sure your Vita and PC are on the same network, or rerun this application and try USB." },
+                { "txtblock_USBInstructions", "Verbinde deine PS Vita jetzt.\r\n\r\nWenn nichts passiert:\r\n1. Starte den Inhaltsmanager auf deiner PS Vita.\r\n2. Wähle Inhalte kopieren\r\n3. Wenn gefragt wird: Wähle PC und USB\r\n\r\nFalls es nun noch immer nicht funktioniert, starte deinen Computer und PS Vita neu und versuche den Vorgang erneut.\r\n\r\nFalls es immer nicht funktioniert, muss du möglicherweise QCMA manuell installieren und einen anderen Treiber als libusbk auswählen." },
+                { "txtblock_WifiInstructions", "Auf deiner PS Vita:\r\n1. Starte den Inhaltsmanager\r\n2. Wähle Inhalte kopieren\r\n3. Wähle PC\r\n4. Wähle WiFi\r\n5. Wähle den Namen deines PCs\r\n6. Gib den Code ein, der auf deinem PC erscheint.\r\n7. Wähle Registrieren\r\n\r\nFalls es nicht funktioniert, stelle sicher dass dein PC und deine Vita mit dem selben Netzwerk verbunden sind, oder starte diese Programm neu und wähle USB." },
 
                 { "btn_Import", "Ich habe bereits einige oder alle Dateien heruntergeladen" },
                 { "btn_Ok", "OK" },
@@ -702,9 +712,9 @@ namespace auto_h_encore {
                 { "btn_Start", "Start" },
                 { "btn_Done", "Fertig" },
                 { "btn_Browse", "Durchsuchen" },
-				{ "btn_Next", "Next" },
+				        { "btn_Next", "Weiter" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "WiFi (Firmware 3.68 ONLY)" },
+                { "btn_Wifi", "WiFi (nur PS Vita System-Version 3.68)" },
 
                 { "cbx_Trim", "Überflüssigen Inhalt der Bitter Smile Demo entfernen (Reduziert die Größe der h-encore-App von ~240MB auf ~13MB)" },
                 { "cbx_DeleteExisting", "Bestehende Dateien löschen (tue dies, falls zuvor etwas schiefgelaufen ist)" },
@@ -714,7 +724,7 @@ namespace auto_h_encore {
                 { "browse_Generic", "Suche nach " },
 
                 { "info_Finish",  "Um deine h-encore-Installation abzuschließen:\r\n"
-                        + "1. Connect your PS Vita to your PC using Content Manager like you did before (if it isn't still connected)\r\n"
+                        + "1. Verbinde deine PS Vita mit deinem Computer mithilfe des Inhaltsmanagers, wie du es bereits getan hast (Falls sie nicht noch immer verbunden ist).\r\n"
                         + "     Wenn die Vita meldet, dass du die Firmware aktualisieren musst, deaktiviere das WLAN auf deiner Vita und starte die Konsole neu.\r\n"
                         + "4. Wähle im Content Manager, PC -> PS Vita System\r\n"
                         + "5. Wähle Applikationen\r\n"
@@ -737,13 +747,13 @@ namespace auto_h_encore {
                 { "error_Template", "Fehler {0} aufgetreten.\r\n\r\n{1}\r\n\r\nBitte versuche es erneut. Falls du das Problem nicht lösen kannst, dann erstelle einen Fehlerbericht im Issue Tracker mit diesem Code." },
                 { "error_Redownload",  "Fehler 1001-0105\r\n\r\nFehler beim Download der Datei {0}\r\n\r\nStelle sicher, dass du Zugang zum Internet hast und/oder versuche es nochmal. Wenn es immer noch nicht klappt, dann erstelle einen Fehlerbericht im Issue Tracker."},
 
-                { "log_SearchingForQCMA", "Searching for QCMA..." },
-                { "log_FoundQCMA", "Found QCMA." },
-                { "log_QCMANotFound", "QCMA not found, will download." },
-                { "log_KillingQCMA", "Killing any running QCMA processes..." },
-                { "log_QCMARegistry", "Importing QCMA registry information..." },
-                { "log_ScrubAID", "Scrubbing AID value" },
-                { "log_Prompt", "Prompting user for information..." },
+                { "log_SearchingForQCMA", "Suche nach QCMA..." },
+                { "log_FoundQCMA", "QCMA gefunden." },
+                { "log_QCMANotFound", "QCMA nicht gefunden. Es wird heruntergeladen." },
+                { "log_KillingQCMA", "Laufende QCMA Prozesse werden geschlossen..." },
+                { "log_QCMARegistry", "QCMA Registry Informationen werden importiert..." },
+                { "log_ScrubAID", "Setze AID-Wert zurück" },
+                { "log_Prompt", "Nutzer wird nach Informationen gefragt..." },
                 { "log_Done", "        Fertig!" },
                 { "log_WipeFiles", "Lösche alte Dateien..." },
                 { "log_Import", "Datei-Import für {0} gültig." },
@@ -755,8 +765,8 @@ namespace auto_h_encore {
                 { "log_Importing", "Importiere {0}" },
                 { "log_Downloading", "Downloade {0}" },
                 { "log_Extracting", "Entpacke {0}" },
-                { "log_ExtractingPKG", "Entpacke Bitter smile Demo mit pkg2zip..." },
-                { "log_Trimming", "Entferne überflüssigen Inhalt aus der Bitter smile Demo..." },
+                { "log_ExtractingPKG", "Entpacke Bitter Smile Demo mit pkg2zip..." },
+                { "log_Trimming", "Entferne überflüssigen Inhalt aus der Bitter Smile Demo..." },
                 { "log_MoveToHencore", "Bewege {0} ins h-encore Arbeitsverzeichnis..." },
                 { "log_MoveLicense", "Verschiebe Lizenzdatei..." },
                 { "log_GetCMA", "Hole CMA-Verschlüsselungs-Key mit der AID {0}" },

@@ -130,6 +130,10 @@ namespace auto_h_encore {
             form.info(Language.MountedLanguage["log_Done"]);
         }
 
+        public static void KillQCMA() {
+            foreach (Process k in Process.GetProcessesByName("qcma")) k.Kill();
+        }
+
         public static void ImportRegistry(Form1 form) {
             if (Registry.GetValue("HKEY_CURRENT_USER\\Software\\codestation\\qcma", "lastAccountId", null) == null) {
                 form.info("Importing QCMA Registry Information...");
