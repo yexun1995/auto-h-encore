@@ -38,7 +38,7 @@ namespace auto_h_encore {
                 { "btn_Browse", "Browse" },
                 { "btn_Next", "Next" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "WiFi (Firmware 3.68 ONLY)" },
+                { "btn_Wifi", "Wi-Fi" },
 
                 { "cbx_Trim", "Trim excess content from bitter smile demo (reduces h-encore app size from ~240MB to ~13MB)" },
                 { "cbx_DeleteExisting", "Delete existing files (do this if something went wrong before)" },
@@ -134,7 +134,7 @@ namespace auto_h_encore {
                 { "btn_Browse", "浏览" },
                 { "btn_Next", "下一步" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "WiFi (仅限 3.68 版本系统)" },
+                { "btn_Wifi", "Wi-Fi" },
 
 
                 { "cbx_Trim", "删减 bitter smile demo 的多余内容 (将 h-encore app 大小 从 240MB 减小到 13MB)" },
@@ -206,7 +206,7 @@ namespace auto_h_encore {
                 { "lbl_ChooseLanguage", "Elegir idioma:" },
                 { "lbl_VersionText", "Versión de auto H-encore " },
                 { "lbl_Issues", "Seguimiento de incidencias" },
-				        { "lbl_ConnectionMethod", "¿Cómo vas a conectar tu PS Vita para transferir H-encore?" },
+                        { "lbl_ConnectionMethod", "¿Cómo vas a conectar tu PS Vita para transferir H-encore?" },
                 { "lbl_UnplugVita", "Si tu PS Vita está conectada, desconéctala y pulsa siguiente." },
                 { "lbl_InstallingUSB", "Instalando driver del USB, por favor, espera..." },
                 { "lbl_WifiProblems", "Si tu PS Vita te pone que necesita actualizar tu firmware, apaga el Wifi y reinicia tu PS Vita. ¡Esto también significa que no puedes transferir H-encore por Wifi si no actualizas!" },
@@ -229,10 +229,10 @@ namespace auto_h_encore {
                 { "btn_Start", "Empezar" },
                 { "btn_Done", "Hecho" },
                 { "btn_Browse", "Navegar" },
-				        { "btn_Next", "Siguiente" },
+                        { "btn_Next", "Siguiente" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "WiFi (SOLO Firmware 3.68)" },
-				
+                { "btn_Wifi", "Wi-Fi" },
+
                 { "cbx_Trim", "Eliminar contenido sobrante de la demo bitter smile (reduce el tamaño de app de H-encore de ~240MB a ~13MB)." },
                 { "cbx_DeleteExisting", "Borrar archivos existentes (haz esto si ha ocurrido algún error en el proceso)." },
                 { "cbx_OverrideHashes", "Ignorar los Hashes de los archivos." },
@@ -301,7 +301,7 @@ namespace auto_h_encore {
                { "lbl_ChooseLanguage", "Scegli la lingua:" },
                 { "lbl_VersionText", "versione auto h-encore " },
                 { "lbl_Issues", "Tracker dei problemi" },
-				        { "lbl_ConnectionMethod", "In che modo vuoi connettere la tua PS Vita  per il trasferimento di h-encore?" },
+                        { "lbl_ConnectionMethod", "In che modo vuoi connettere la tua PS Vita  per il trasferimento di h-encore?" },
                 { "lbl_UnplugVita", "Se la tua PSVita è collegata, scollegala, quindi fai clic su Avanti." },
                 { "lbl_InstallingUSB", "Installazione del driver USB, attendere prego..." },
                 { "lbl_WifiProblems", "Se la tua PSVita dice che devi aggiornare il tuo firmware, spegni la Wifi e riavvia la PSVita. Questo significa anche che non è possibile trasferire h-encore su Wifi senza aggiornamento!" },
@@ -325,9 +325,9 @@ namespace auto_h_encore {
                 { "btn_Done", "Fatto" },
                 { "btn_Browse", "Sfoglia" },
 
-				        { "btn_Next", "Avanti" },
+                        { "btn_Next", "Avanti" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "WiFi (SOLO Firmware 3.68 )" },
+                { "btn_Wifi", "Wi-Fi" },
 
 
                 { "cbx_Trim", "Ritaglia il contenuto in eccesso dalla demo bitter smile (riduce le dimensioni delle app h-encore da ~ 240 MB a ~ 13 MB)" },
@@ -400,7 +400,7 @@ namespace auto_h_encore {
                 { "lbl_VersionText", "Версия auto h-encore " },
                 { "lbl_Issues", "Issue-трекер" },
 
-				        { "lbl_ConnectionMethod", "Как вы хотите подключать PS Vita для переноса h-encore?" },
+                        { "lbl_ConnectionMethod", "Как вы хотите подключать PS Vita для переноса h-encore?" },
                 { "lbl_UnplugVita", "Если ваша Vita подключена, то отключите её и нажмите Далее." },
                 { "lbl_InstallingUSB", "Установка USB драйвера, пожалуйста подождите..." },
                 { "lbl_WifiProblems", "Если ваша Vita требует обновить прошивку, то выключите Wi-Fi и перезагрузите её. Также это означает, что вы не сможете перенести h-encore через Wi-Fi без обновления!" },
@@ -411,7 +411,7 @@ namespace auto_h_encore {
                 { "status_BadHash", "Файл выбран, но хэш не прошел проверку, он будет переустановлен." },
                 { "status_Override", "Файл выбран, но хэш не прошел проверку. Перерасчет хэша запущен и он будет импортирован." },
                 { "status_Calculating", "Расчет хэша файла..." },
-                
+
 
                 { "txtblock_BeforeRunning", "Программа автоматически установит QCMA, если вы не сделали этого сами. Она также сама запустит и настроит его. Это значит:\r\n    Если QCMA не установлен:\r\n        QCMA будет настроен и использован исключительно для использования с auto h-encore.\r\n        USB драйвер будет установлен, если вы выбрали перенос через USB.\r\n    Если QCMA уже установлен:\r\n        Будет использован существующий QCMA.\r\n        Новых USB драйверов не будет установлено и ваши настройки не будут изменены. \r\n\r\nВ принципе, вам больше не потребуется взаимодействовать с QCMA до тех пор, пока не возникнут проблемы. Если проблемы все-таки возникнут, то сообщите об этом в issue-трекере."},
                 { "txtblock_Import", "Если вы заранее установили все нужные файлы и не хотите чтоб программа снова их установила, то здесь вы можете выбрать уже имеющиеся файлы." },
@@ -424,12 +424,11 @@ namespace auto_h_encore {
                 { "btn_Start", "Начать" },
                 { "btn_Done", "Готово" },
                 { "btn_Browse", "Обзор" },
-
-				        { "btn_Next", "Далее" },
+                { "btn_Next", "Далее" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "Wi-Fi (Только прошивка 3.68)" },
+                { "btn_Wifi", "Wi-Fi" },
 
-              
+
                 { "cbx_Trim", "Обрезать лишний контент из bittersmile demo (размер h-encore уменьшается с ~240MБ до ~13MБ)" },
                 { "cbx_DeleteExisting", "Удаление лишних файлов (сделайте это, если ранее что-то пошло не так)" },
                 { "cbx_OverrideHashes", "Игнорировать несоответствие хэша" },
@@ -498,7 +497,7 @@ namespace auto_h_encore {
                 { "lbl_ChooseLanguage", "Escolha o idioma:" },
                 { "lbl_VersionText", "Versão auto h-encore " },
                 { "lbl_Issues", "Rastreador de Erros" },
-				        { "lbl_ConnectionMethod", "Como você irá conectar seu PS VITA para transferir o h-encore?" },
+                        { "lbl_ConnectionMethod", "Como você irá conectar seu PS VITA para transferir o h-encore?" },
                 { "lbl_UnplugVita", "Se seu Vita está conectado, desconecte e clique em Próximo." },
                 { "lbl_InstallingUSB", "Instalando driver USB, por favor aguarde..." },
                 { "lbl_WifiProblems", "Se seu Vita disser que precisa atualizar o firmware, desligue o Wifi e reinicie seu Vita. Isso também significa que você não pode transferir o h-encore através do Wifi sem atualizar!" },
@@ -522,9 +521,9 @@ namespace auto_h_encore {
                 { "btn_Start", "Iniciar" },
                 { "btn_Done", "Feito" },
                 { "btn_Browse", "Procurar" },
-				        { "btn_Next", "Próximo" },
+                { "btn_Next", "Próximo" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "WiFi (Firmware 3.68 SOMENTE)" },
+                { "btn_Wifi", "Wi-Fi" },
 
                 { "cbx_Trim", "Tirar o conteúdo excessivo do demo bitter smile (reduz o tamanho do app h-encore de ~240MB para ~13MB)" },
                 { "cbx_DeleteExisting", "Deletar arquivos existentes (faça isso se alguma coisa deu errada antes)" },
@@ -594,7 +593,7 @@ namespace auto_h_encore {
                 { "lbl_ChooseLanguage", "Choisis la langue :" },
                 { "lbl_VersionText", "auto h-encore version " },
                 { "lbl_Issues", "Issue Tracker" },
-				        { "lbl_ConnectionMethod", "Comment vous voulez connecter votre Vita pour transférer h-encore ?" },
+                        { "lbl_ConnectionMethod", "Comment vous voulez connecter votre Vita pour transférer h-encore ?" },
                 { "lbl_UnplugVita", "Si votre Vita est branché, débranché la, et cliquer sur suivant." },
                 { "lbl_InstallingUSB", "Installation du pilote USB, Veuillez patientez svp..." },
                 { "lbl_WifiProblems", "Si Votre Vita demande une mise à jour du firmware, veuillez désactiver la connexion Wifi et redémarré là. Ça signifie aussi que vous ne pouvez pas transférer h-encore via Wifi sans mettre à jour votre Vita !" },
@@ -605,7 +604,7 @@ namespace auto_h_encore {
                 { "status_BadHash", "Le fichier sélectionné et le Hash ne correspondent pas, pas d’importation." },
                 { "status_Override", "Le fichier sélectionné et le Hash ne correspondant pas, mais le forcing est activé, importation." },
                 { "status_Calculating", "Calcul du Hash du fichier..." },
-                
+
                 { "txtblock_BeforeRunning", "Cette application va télécharger QCMA automatiquement s'il n'est pas déjà installé. Elle va aussi le lancer et le contrôler. Ça veut dire:\r\n    Si QCMA n'est pas installé : \r\n        QCMA va être téléchargé pour un usage local par cette application. \r\n        Un pilote USB va être installé si vous choisirez de transférer via USB\r\n    Si QCMA est installé : \r\n        Votre installation QCMA existante va être utilisée. \r\n        Aucun pilote USB va être installé, et votre configuration ne va pas être modifiée. \r\n\r\nVous n'avez plus besoin d'interagir avec QCMA sauf s'il y a des problèmes. Si vous avez un problème, Veuillez soumettre un rapport dans l'issue Tracker."},
                 { "txtblock_Import", "Si vous avez déjà téléchargé une partie ou tous les fichiers nécessaires, et que vous ne voulez pas que l’application les télécharge à nouveau, vous pouvez la sélectionner ici pour que le programme les importe." },
                 { "txtblock_USBInstructions", "Connecter Votre PS Vita maintenant. \r\n\r\nSi rien ne se passe:\r\n1. Lancer le gestionnaire de contenu sur votre PS Vita \r\n2. Sélectionner Copier Du Contenu\r\n3. Si Demandé : Sélectionner PC et USB\r\n\r\nSi ça ne marche toujours pas, essayer de redémarrer Pc et votre Vita et ressayer (refaite les même étapes a nouveau).\r\n\r\nSi ça ne marche toujours pas, installer manuellement QCMA et sélectionner un autre pilote autre que libusbk." },
@@ -617,9 +616,9 @@ namespace auto_h_encore {
                 { "btn_Start", "Démarrer" },
                 { "btn_Done", "Fini" },
                 { "btn_Browse", "Parcourir" },
-		{ "btn_Next", "Suivant" },
+                { "btn_Next", "Suivant" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "Wi-Fi (Firmware 3.68 SEULEMENT)" },
+                { "btn_Wifi", "Wi-Fi" },
 
                 { "cbx_Trim", "Réduit l’excès de contenu de la démo bitter smile (réduire la taille de l'application h-encore de ~240MB a ~13MB)" },
                 { "cbx_DeleteExisting", "Supprimer les fichiers existants (Faites ceci en cas d'erreur)" },
@@ -689,7 +688,7 @@ namespace auto_h_encore {
                 { "lbl_ChooseLanguage", "Wähle eine Sprache:" },
                 { "lbl_VersionText", "auto h-encore version " },
                 { "lbl_Issues", "Issue Tracker" },
-				        { "lbl_ConnectionMethod", "Wie möchtest du deine PS Vita verbinden, um h-encore zu übertragen?" },
+                        { "lbl_ConnectionMethod", "Wie möchtest du deine PS Vita verbinden, um h-encore zu übertragen?" },
                 { "lbl_UnplugVita", "Wenn deine Vita am PC angeschlossen ist, entferne sie und klicke dann auf Weiter." },
                 { "lbl_InstallingUSB", "USB Treiber wird installiert, bitte warten..." },
                 { "lbl_WifiProblems", "Wenn deine Vita ein Update ausführen möchte, deaktiviere WiFi und starte deine Vita neu. Das bedeutet auch, dass du h-encore nicht über WiFi übertragen kannst, ohne ein Update durchzuführen!" },
@@ -712,9 +711,9 @@ namespace auto_h_encore {
                 { "btn_Start", "Start" },
                 { "btn_Done", "Fertig" },
                 { "btn_Browse", "Durchsuchen" },
-				        { "btn_Next", "Weiter" },
+                { "btn_Next", "Weiter" },
                 { "btn_USB", "USB" },
-                { "btn_Wifi", "WiFi (nur PS Vita System-Version 3.68)" },
+                { "btn_Wifi", "Wi-Fi" },
 
                 { "cbx_Trim", "Überflüssigen Inhalt der Bitter Smile Demo entfernen (Reduziert die Größe der h-encore-App von ~240MB auf ~13MB)" },
                 { "cbx_DeleteExisting", "Bestehende Dateien löschen (tue dies, falls zuvor etwas schiefgelaufen ist)" },
@@ -779,9 +778,197 @@ namespace auto_h_encore {
                 { "title_Import", "Importiere bestehende Dateien" },
                 { "title_Warning", "Warnung" },
                 { "title_Error", "Fehler" }
+                } },
+            { "日本語(Japanese)",  new Dictionary<string, string> {
+                { "lbl_ChooseLanguage", "言語を選択:" },
+                { "lbl_VersionText", "auto h-encore Ver." },
+                { "lbl_Issues", "Issue Tracker(バグ情報/提供)" },
+                { "lbl_ConnectionMethod", "PSVitaのPCへの接続方法を選択して下さい" },
+                { "lbl_UnplugVita", "Vitaが接続されている場合はUSBを抜いて「次へ」をクリックします" },
+                { "lbl_InstallingUSB", "USBドライバをPCにインストールしています。しばらくお待ちください..." },
+                { "lbl_WifiProblems", "h-encoreはPS Vitaが最新のFWでない場合はWi-Fi接続で転送する事は出来ません。接続中に本体更新が要求されたらWi-Fiを切ってPS Vitaを再起動して下さい" },
+
+                { "status_NoFile", "ファイルが選択されていません。ダウンロードします" },
+                { "status_Invalid", "ファイルパスが無効です" },
+                { "status_Valid", "選択したファイルとハッシュの一致を確認してインポートします" },
+                { "status_BadHash", "選択したファイルのハッシュが一致しません" },
+                { "status_Override", "選択したファイルのハッシュが一致しません。ハッシュオーバーライドを有効化してインポートします" },
+                { "status_Calculating", "ファイルハッシュを計算中..." },
+
+                { "txtblock_BeforeRunning", "QCMAがインストールされていない場合、[auto h-encore]は自動的にQCMAをダウンロード、起動して管理します:\r\n    QCMAがインストールされていない場合:\r\n        [auto h-encore]はQCMAを使用するためにダウンロードします\r\n        USB経由で転送する場合はUSBドライバがインストールされます\r\n    QCMAがインストールされている場合:\r\n        既存のQCMAが使用されます\r\n        USBドライバはインストールされず、設定は上書きされません\r\n\r\n基本的にQCMAを操作する必要は有りません。 問題がある場合は「Issue Tracker」にレポートを提出して下さい"},
+                { "txtblock_Import", "既に必要なファイルの一部を用意していてダウンロードする必要の無いファイルが有る場合は、ここでインポートするファイルを選択できます" },
+                { "txtblock_USBInstructions", "PS Vitaを接続して下さい\r\n\r\n何も起こらない場合:\r\n1. PS Vitaで「コンテンツ管理」を起動\r\n2. 「コンテンツをコピーする」を選択\r\n3. プロンプトが表示されたら: 「パソコン→PS Vita」を選択\r\n\r\n動作しない場合はPCとPS Vitaを再起動して再試行（上記の手順を再度実行）\r\n\r\nそれでも動作しない場合はQCMAを手動でインストールし、libusbk以外のドライバを選択する必要があります" },
+                { "txtblock_WifiInstructions", "PS Vita側の作業:\r\n1. コンテンツ管理を起動\r\n2. 「コンテンツをコピーする」を選択\r\n3. 「パソコン→PS Vita」を選択\r\n4. 「WiFi」を選択\r\n5. 接続したいPCを選択\r\n6. PCに表示されるコードを入力\r\n7. 「登録」を選択\r\n\r\n動作しない場合はVitaとPCが同じネットワークに接続されているか確認するか[auto h-encore]を再実行してUSB接続を試して下さい" },
+
+                { "btn_Import", "既に用意されているファイルを使用する" },
+                { "btn_Ok", "はい" },
+                { "btn_Close", "閉じる" },
+                { "btn_Start", "スタート" },
+                { "btn_Done", "完了" },
+                { "btn_Browse", "参照" },
+                { "btn_Next", "次へ" },
+                { "btn_USB", "USB" },
+                { "btn_Wifi", "Wi-Fi" },
+
+                { "cbx_Trim", "bitter smile.体験版から余分なデータを削除(h-encoreアプリのサイズを240MBから13MBに減らす)" },
+                { "cbx_DeleteExisting", "既存のファイルを削除(エラーが起きた場合)" },
+                { "cbx_OverrideHashes", "不一致のファイルハッシュを無視" },
+
+                { "browse_Generic", "参照 " },
+
+                { "info_Finish",  "h-encoreのインストールを完了するには:\r\n"
+                        + "1. 前回同様「コンテンツ管理」を使用してPS VitaをPCに接続(接続していない場合)\r\n"
+                        + "     Vitaを更新する必要が有ると表示されたら、WiFiをオフにしてコンソールを再起動\r\n"
+                        + "2. コンテンツ管理で「パソコン→PS Vita」を選択\r\n"
+                        + "3. 「アプリケーション」を選択\r\n"
+                        + "4. 「PS Vita」を選択\r\n"
+                        + "5. 「h-encore」を選択して「コピー」を押す\r\n"
+                        + "6. ホーム画面から「h-encore」を起動\r\n"
+                        + "     クラッシュした場合は、Vitaを再起動してもう一度起動\r\n\r\n"
+                        + "以上です"},
+
+                { "warn_HashCompat", "[auto h-encore]が想定していないバージョンのアプリを使用している場合、互換性は保証できません。続けますか?" },
+                { "warn_DeleteExistingBittersmile", "「bittersmile.体験版」のバックアップをQCMAディレクトリから削除します。保護したい場合は今すぐ移動して下さい" },
+
+                { "error_WebException", "ダウンロードできませんでした。インターネット接続を確認して下さい" },
+                { "error_Unknown", "例外的なエラーが発生しました: {0}" },
+                { "error_DirectoryNotFoundException", "作成されたディレクトリは削除されているか、抽出されなかったか、サポートされていないファイルインポートを使用しています" },
+                { "error_UnauthorizedAccessException", "[auto h-encore]にはインストールされたディレクトリへのアクセス権がありません。アプリケーションを管理者として再実行して下さい" },
+                { "error_FileNotFoundException",  "作成されたディレクトリは削除されています。またはディレクトリが抽出されなかったかサポートされていないファイルインポートを使用しています"},
+                { "error_InvalidOperationException",  "ダウンロードに失敗しました。ネットワークの安定性を確認して下さい"},
+                { "error_TargetInvocationException", "MD5の作成に失敗しました" },
+                { "error_Template", "エラー {0} が発生しました\r\n\r\n{1}\r\n\r\nプロセスを再試行して下さい。問題を解決できない場合は、エラーコードを[Issue Tracker]で報告して下さい" },
+                { "error_Redownload",  "エラー 1001-0105\r\n\r\nファイルのダウンロードに失敗しました {0}\r\n\r\nインターネットが接続されているかどうかを確認し、再実行しても問題が解決しない場合は[Issue Tracker]で報告して下さい"},
+
+                { "log_SearchingForQCMA", "QCMAを探しています..." },
+                { "log_FoundQCMA", "QCMAが見つかりました" },
+                { "log_QCMANotFound", "QCMAが見つかりません。ダウンロードします" },
+                { "log_KillingQCMA", "実行中のQCMAプロセスを強制終了中..." },
+                { "log_QCMARegistry", "QCMAレジストリ情報のインポート中..." },
+                { "log_ScrubAID", "AIDを検索中..." },
+                { "log_Prompt", "ユーザーに情報の入力を促しています..." },
+                { "log_Done", "        完了" },
+                { "log_WipeFiles", "古いファイルを削除中..." },
+                { "log_Import", "ファイル {0} のインポートが有効です" },
+                { "log_DownloadValid", "ファイル {0} は既にダウンロードているためダウンロードされません" },
+                { "log_DownloadInvalid", "ファイル {0} は既にダウンロードされていますが、ハッシュが一致しません" },
+                { "log_NotDownloaded", "ファイル {0} はダウンロードまたはインポートされていないため、ダウンロードします" },
+                { "log_WorkingDirs", "作業用ディレクトリを生成中..." },
+                { "log_CorrectLocation", "ファイル {0} を正しい位置に保存中..." },
+                { "log_Importing", "{0} をインポート中..." },
+                { "log_Downloading", "{0} をダウンロード中..." },
+                { "log_Extracting", "{0} を抽出中..." },
+                { "log_ExtractingPKG", "pkg2zipで「bitter smile.体験版」を抽出中..." },
+                { "log_Trimming", "「bitter smile.体験版」から余分なデータを抜き出し中..." },
+                { "log_MoveToHencore", "{0} をh-encore作業用ディレクトリに移動中..." },
+                { "log_MoveLicense", "ライセンスファイルを移動中..." },
+                { "log_GetCMA", "AID {0} からCMA暗号化キーを生成中..." },
+                { "log_GotCMA", "CMA暗号化キー {0} を生成しました" },
+                { "log_Packaging", "psvimgtoolsでh-encore {0} をパッキング中..." },
+                { "log_MoveToQCMA", "h-encoreファイルをQCMA APPディレクトリに移動中...\r\n" },
+                { "log_Finished", "自動h-encore生成が完了しました\r\n" },
+
+                { "title_Main", "auto h-encore" },
+                { "title_Import", "既存のファイルをインポート" },
+                { "title_Warning", "警告" },
+                { "title_Error", "エラー" }
+                } },
+            { "Türkçe",  new Dictionary<string, string> {
+                { "lbl_ChooseLanguage", "Dili Seçin:" },
+                { "lbl_VersionText", "auto h-encore versiyonu " },
+                { "lbl_Issues", "Hata Takibi" },
+                { "lbl_ConnectionMethod", "H-encore yüklemesi için Vitanızı nasıl bağlamayı planlıyorsunuz?" },
+                { "lbl_UnplugVita", "Eğer Vitanız bağlı ise, bağlantıyı kesin ve İleri'ye tıklayın." },
+                { "lbl_InstallingUSB", "USB sürücüsü yükleniyor, lütfen bekleyin..." },
+                { "lbl_WifiProblems", "Eğer Vitanız versiyon güncellemesi yapmanızı istiyorsa, WiFi bağlantısını kapatın ve Vitanızı yeniden başlatın. Bu durum güncelleme yapmadan Wifi kullanarak h-encore yüklemesi yapamayacağınız anlamına gelir!" },
+
+                { "status_NoFile", "Hiçbir dosya seçilmedi, indiriliyor." },
+                { "status_Invalid", "Dosya dizini geçersiz." },
+                { "status_Valid", "Dosya seçildi ve bütünlüğü doğrulandı, aktarılıyor." },
+                { "status_BadHash", "Dosya seçildi ve bütünlüğü doğrulanamadı, indiriliyor." },
+                { "status_Override", "Dosya seçildi ancak bütünlüğü sağlanamadı. Bütünlük sağlanılarak aktarılıyor." },
+                { "status_Calculating", "Dosya bütünlüğü kontrol ediliyor..." },
+
+                { "txtblock_BeforeRunning", "Uygulama QCMA yüklü değilse otomatik olarak indirecektir. Ayrıca çalıştırıp ayarlamaları otomatik bir şekilde yapacaktır. Eğer:\r\n    QCMA yüklü değil ise:\r\n        QCMA bu program tarafından kullanılmak üzere indirilecektir.\r\n        USB ile uygulama aktarımını seçerseniz USB sürücüsü de yüklenecektir\r\n    Eğer QCMA yüklü ise:\r\n        Varolan yükleme kullanılacaktır.\r\n        Yeni USB sürücüleri yüklenmeyecek ve varolan ayarlarınız değiştirilmeyecektir.\r\n\r\nÖzetle, herhangi bir problem yaşamadıkça QCMA program tarafından yönetilecektir. Eğer hata alırsanız, lütfen Hata Takibi bölümünden hata bildiriminde bulunun."},
+                { "txtblock_Import", "Eğer gerekli dosyaların bazılarını veya tamamını indirmiş ve programın tekrar indirmesini istemiyorsanız, buradan dosyaları seçip programa aktarabilirsiniz." },
+                { "txtblock_USBInstructions", "Şimdi PS Vitanızı bağlayın.\r\n\r\nIEğer tanımlanmazsa:\r\n1. Vitanızdan İçerik Yöneticisini çalıştırın\r\n2. İçeriği kopyalayı seçin\r\n3. Sorulması durumunda: Bilgisayar ardından USB kablosunu seçin\r\n\r\nEğer hala çalışmıyorsa, bilgisayarınızı ve Vitanızı yeniden başlatın ve yeniden deneyin (yukarıdaki adımları).\r\n\r\nBunlara rağmen çalışmıyorsa, QCMA uygulamasını kendiniz yükleyin ve libusbk dışında bir USB sürücüsü kullanın." },
+                { "txtblock_WifiInstructions", "PS Vitanızdan:\r\n1. İçerik Yöneticisini çalıştırın\r\n2. İçeriği Kopyalayı seçin\r\n3. Bigisayarı seçin\r\n4. Wifiyi seçin\r\n5. Bilgisayarınızın adını seçin\r\n6. Bilgisayarınızda çıkan kodu girin\r\n7. Kaydeti seçin\r\n\r\nEğer çalışmazsa, Vita ve bilgisayarınızın aynı ağa bağlı olduğundan emin olun, veya uygulamayı yeniden başlatıp USB ile bağlanın." },
+
+                { "btn_Import", "Gerekli dosyaların bazıları veya tamamını indirdim, yeniden indirmek yerine varolanları kullanmak istiyorum" },
+                { "btn_Ok", "Tamam" },
+                { "btn_Close", "Kapat" },
+                { "btn_Start", "Başlat" },
+                { "btn_Done", "Bitti" },
+                { "btn_Browse", "Gözat" },
+                { "btn_Next", "İleri" },
+                { "btn_USB", "USB" },
+                { "btn_Wifi", "Wi-Fi" },
+
+                { "cbx_Trim", "Bitter Smile demosundan gereksiz dosyaları temizle (h-encore boyutu ~240MB'den ~13MB'ye düşecektir)" },
+                { "cbx_DeleteExisting", "Varolan dosyaları sil (Hata aldıysanız bunu yapın)" },
+                { "cbx_OverrideHashes", "Bütünlüğü sağlanamayan dosyaları yine de kullan" },
+
+                { "browse_Generic", "Gözat " },
+
+                { "info_Finish",  "h-encore yüklemesini tamamlamak için:\r\n"
+                        + "1. Daha önce yaptığınız gibi PS Vitanızı bilgisayarınıza yeniden bağlayın (eğer bağlı ise devam edin)\r\n"
+                        + "     Eğer Vitanız versiyon güncellemesi yapmanızı istiyorsa, WIFI bağlantısını kapatın ve Vitanızı yeniden başlatın\r\n"
+                        + "2. İçerik yöneticisi, İçeriği kopyala, Bilgisayar -> PS Vita Sistemini seçin\r\n"
+                        + "3. Uygulamaları seçin\r\n"
+                        + "4. PS Vita'yı seçin\r\n"
+                        + "5. h-encore uygulamasını seçip Kopyala'ya basın\r\n"
+                        + "6. Live Area ekranından h-encore uygulamasını çalıştırın\r\n"
+                        + "     Uygulama ilk çalıştırdığınızda çökerse, Vitanızı yeniden başlatmayı ve uygulamayı yeniden çalıştırmayı deneyin\r\n\r\n"
+                        + "Tamamlandı!"},
+
+                { "warn_HashCompat", "Programın dizayn edildiği uygulamaların güncel versiyonları kullanılmadığında uyumluluk garantisi verilmemektedir. Yine de devam et?" },
+                { "warn_DeleteExistingBittersmile", "QCMA dizininde varolan bittersmile demosunu kaldırmak zorundasınız. Silinmesini istemiyorsanız, başka bir dizine taşıyın. Silinsin mi?" },
+
+                { "error_WebException", "Dosya indirme işlemi başarısız oldu. İnternet bağlantınızı kontrol edin." },
+                { "error_Unknown", "{0} için bir hata oluştu." },
+                { "error_DirectoryNotFoundException", "Oluşturulan dizin bulunamadı (silinmiş olabilir) VEYA dizinde çıkarma işlemi başarısız olmuş olabilir VEYA desteklenmeyen uzantıda dosya aktardınız." },
+                { "error_UnauthorizedAccessException", "Uygulama yüklendiği dizinde değişiklik yapma yetkisine sahip değil. Uygulamayı Yönetici olarak tekrar çalıştırmayı deneyin." },
+                { "error_FileNotFoundException",  "Oluşturulan dosya bulunamadı (silinmiş olabilir) VEYA dosya çıkarılırken başarısız olunmuş olabilir VEYA desteklenmeyen uzantıda dosya aktardınız."},
+                { "error_InvalidOperationException",  "Bir dosya tam indirilemedi. Lütfen internet bağlantınızın stabilliğini kontrol ediniz."},
+                { "error_TargetInvocationException", "MD5 hesaplayıcı oluşturulurken başarısız olundu." },
+                { "error_Template", "{0} için hata oluştu.\r\n\r\n{1}\r\n\r\nLütfen işlemleri tekrarlayın. Eğer yine hata alırsanız, lütfen hata takibi bölümünden aldığınız hata koduyla birlikte hata bildiriminde bulunun." },
+                { "error_Redownload",  "1001-0105 Hatası\r\n\r\n {0} için dosya indirme başarısız oldu\r\n\r\nİnternet bağlantınızı kontrol edin ve/veya yeniden deneyin. Eğer hala çalışmazsa, Hata Bildirimi bölümünden Github üzerinden bildirimde bulunun."},
+
+                { "log_SearchingForQCMA", "QCMA uygulaması aranıyor..." },
+                { "log_FoundQCMA", "QCMA uygulaması bulundu." },
+                { "log_QCMANotFound", "QCMA uygulaması bulunamadı, indiriliyor." },
+                { "log_KillingQCMA", "Arka planda çalışan QCMA işlemleri kapatılıyor..." },
+                { "log_QCMARegistry", "QCMA ayarları aktarılıyor..." },
+                { "log_ScrubAID", "AID verisi temizleniyor" },
+                { "log_Prompt", "Kullanıcı bilgisi isteniyor..." },
+                { "log_Done", "        Tamamlandı!" },
+                { "log_WipeFiles", "Gereksiz dosyalar siliniyor..." },
+                { "log_Import", "{0} dosyası için dizin geçerli." },
+                { "log_DownloadValid", "{0} dosyası daha önce indirildi ve doğrulandı, tekrar indirilmeyecek." },
+                { "log_DownloadInvalid", "{0} dosyası bulundu ancak bütünlüğü sağlanamadı, tekrar indiriliyor." },
+                { "log_NotDownloaded", "{0} dosyası eksik veya aktarılmadı, indiriliyor." },
+                { "log_WorkingDirs", "Dizinler oluşturuluyor..." },
+                { "log_CorrectLocation", "{0} dosyası dizinde bulundu, sonraki adıma geçiliyor." },
+                { "log_Importing", "{0} Aktarılıyor" },
+                { "log_Downloading", "{0} İndiriliyor" },
+                { "log_Extracting", "{0} Çıkartılıyor" },
+                { "log_ExtractingPKG", "pkg2zip ile bittersmile demosu çıkartılıyor..." },
+                { "log_Trimming", "Bittersmile demosundan gereksiz dosyalar temizleniyor..." },
+                { "log_MoveToHencore", "{0} h-encore dizinine taşınıyor..." },
+                { "log_MoveLicense", "Lisans dosyası taşınıyor..." },
+                { "log_GetCMA", "AID {0} için CMA şifreleme anahtarı oluşturuluyor" },
+                { "log_GotCMA", "{0} için CMA şifreleme anahtarı oluşturuldu" },
+                { "log_Packaging", "psvimgtools ile h-encore {0} arşivleniyor..." },
+                { "log_MoveToQCMA", "h-encore dosyaları QCMA APP dizinine taşınıyor...\r\n" },
+                { "log_Finished", "auto h-encore yüklemesi tamamlandı!!\r\n" },
+
+                { "title_Main", "auto h-encore" },
+                { "title_Import", "Varolan Dosyaları Aktar" },
+                { "title_Warning", "Uyarı" },
+                { "title_Error", "Hata" }
             } }
         };
-
+        
         public static Dictionary<string, string> MountedLanguage = Languages["English"];
     }
 }

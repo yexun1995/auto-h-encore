@@ -135,7 +135,7 @@ namespace auto_h_encore {
         }
 
         public static void ImportRegistry(Form1 form) {
-            if (Registry.GetValue("HKEY_CURRENT_USER\\Software\\codestation\\qcma", "lastAccountId", null) == null) {
+            if (!Global.QCMA_Installed) {
                 form.info("Importing QCMA Registry Information...");
                 string text = File.ReadAllText(Reference.fpath_reg_qcma);
                 text = text.Replace("${psvita}", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\PS Vita\\");
